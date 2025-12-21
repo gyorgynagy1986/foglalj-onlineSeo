@@ -32,7 +32,7 @@ const EFFECTIVE_DATE = "2025. január 1.";
 const CONTROLLER = {
   name: "Nagy György EV.",
   taxId: "59721639-1-26",
-  address: "6726 Szeged, Pillich K. u. 41.",
+  address: "6726 Szeged, Közép kikötő sor 14/B",
   email: "hello@foglaljonline.hu",
   phone: "+36 30 656 4162",
 };
