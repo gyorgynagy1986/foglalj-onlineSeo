@@ -142,26 +142,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="https://www.bukio.hu/dokumentumok/adatkezeles"
+                  href="/adatkezeles"
                   className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
                 >
                   Adatkezelés
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.bukio.hu/dokumentumok/aszf"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  ÁSZF
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://www.bukio.hu/dokumentumok/sutik"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Sütik
                 </Link>
               </li>
             </ul>
