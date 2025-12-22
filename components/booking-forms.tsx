@@ -27,8 +27,8 @@ const formTypes = [
       "Összes információ egyszerre",
       "Mobilbarát dizájn",
     ],
-    previewUrl: "https://www.bukio.hu/booking/chatbot",
-    demoUrl: "https://www.bukio.hu/booking/chatbot",
+    previewUrl: "https://www.bukio.hu/booking/standard-foglalas",
+    demoUrl: "https://www.bukio.hu/booking/standard-foglalas",
   },
   {
     id: "wizard",
