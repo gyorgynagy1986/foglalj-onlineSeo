@@ -3,7 +3,28 @@
 import { useEffect, useRef } from "react";
 import { Quote, Star } from "lucide-react";
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    testimonial: {
+      quote: string;
+      highlight: string;
+      author: {
+        name: string;
+        role: string;
+        initials: string;
+      };
+    };
+    trustIndicators: Array<{
+      text: string;
+    }>;
+  };
+}
+
+export default function Testimonials({ dict }: TestimonialsProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -35,13 +56,14 @@ export default function Testimonials() {
         <header className="text-center max-w-[680px] mx-auto mb-14 fade-in opacity-0 translate-y-6 transition-all duration-600">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
             <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-            Vélemények
+            {dict.badge}
           </div>
           <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-gray-900 leading-tight mb-5 tracking-[-0.02em]">
-            Mit mondanak <span className="text-[#0d5e4b]">ügyfeleink?</span>
+            {dict.title}{" "}
+            <span className="text-[#0d5e4b]">{dict.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Több mint 500 elégedett étterem használja már a rendszerünket.
+            {dict.subtitle}
           </p>
         </header>
 
@@ -61,23 +83,25 @@ export default function Testimonials() {
 
           {/* Quote text */}
           <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 relative z-[1]">
-            „A Foglalj Online segítségével{" "}
-            <span className="text-[#0d5e4b] font-semibold">40%-kal nőtt</span> a
-            foglalásaink száma. Az automatizált rendszer rengeteg időt spórol
-            meg nekünk, és a vendégeink imádják az egyszerű online foglalást.
-            Professzionális megoldás minden étterem számára!"
+            „{dict.testimonial.quote}{" "}
+            <span className="text-[#0d5e4b] font-semibold">
+              {dict.testimonial.highlight}
+            </span>
+            "
           </p>
 
           {/* Author */}
           <div className="flex items-center justify-center gap-4">
             <div className="w-14 h-14 rounded-full bg-[#0d5e4b] flex items-center justify-center text-white font-bold text-lg">
-              KP
+              {dict.testimonial.author.initials}
             </div>
             <div className="text-left">
               <h4 className="font-semibold text-gray-900 mb-0.5">
-                Kovács Péter
+                {dict.testimonial.author.name}
               </h4>
-              <p className="text-sm text-gray-500">Étterem tulajdonos</p>
+              <p className="text-sm text-gray-500">
+                {dict.testimonial.author.role}
+              </p>
             </div>
           </div>
 
@@ -87,54 +111,24 @@ export default function Testimonials() {
 
         {/* Trust indicators */}
         <div className="fade-in opacity-0 translate-y-6 transition-all duration-600 mt-12 flex flex-wrap items-center justify-center gap-8 text-gray-400 text-sm">
-          <div className="flex items-center gap-2">
-            <svg
-              className="w-5 h-5 text-[#0d5e4b]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span className="text-gray-600">500+ étterem</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg
-              className="w-5 h-5 text-[#0d5e4b]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span className="text-gray-600">4.9/5 értékelés</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <svg
-              className="w-5 h-5 text-[#0d5e4b]"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span className="text-gray-600">Magyar támogatás</span>
-          </div>
+          {dict.trustIndicators.map((indicator, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <svg
+                className="w-5 h-5 text-[#0d5e4b]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <span className="text-gray-600">{indicator.text}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

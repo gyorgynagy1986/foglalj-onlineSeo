@@ -12,79 +12,54 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const primaryColor = "#0d5e4b";
+interface BookingFormsProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    description: string;
+    formTypes: Array<{
+      name: string;
+      description: string;
+      features: string[];
+      popular?: string;
+    }>;
+    buttons: {
+      preview: string;
+      demo: string;
+    };
+    account: {
+      title: string;
+      subtitle: string;
+      features: Array<{
+        title: string;
+        description: string;
+      }>;
+    };
+  };
+}
 
-const formTypes = [
+const formTypeIcons = [Calendar, ListChecks, MessageSquare];
+
+const formTypeUrls = [
   {
-    id: "standard",
-    name: "Standard Űrlap",
-    description:
-      "Hagyományos, egyszerű foglalási űrlap egy lapon minden mezővel. Gyors és hatékony.",
-    icon: Calendar,
-    features: [
-      "Egyoldalas felület",
-      "Gyors kitöltés",
-      "Összes információ egyszerre",
-      "Mobilbarát dizájn",
-    ],
     previewUrl: "https://www.bukio.hu/booking/standard-foglalas",
     demoUrl: "https://www.bukio.hu/booking/standard-foglalas",
   },
   {
-    id: "wizard",
-    name: "Lépésenkénti Űrlap",
-    description:
-      "Többlépéses folyamat, amely szakaszokra bontva vezeti végig a felhasználót.",
-    icon: ListChecks,
-    features: [
-      "Átlátható folyamat",
-      "Fokozatos adatbevitel",
-      "Haladásjelző sáv",
-      "Alacsonyabb lemorzsolódás",
-    ],
     previewUrl: "https://www.bukio.hu/booking/lepesenkenti-foglalas",
     demoUrl: "https://www.bukio.hu/booking/lepesenkenti-foglalas",
     popular: true,
   },
   {
-    id: "chatbot",
-    name: "Chatbot Űrlap",
-    description:
-      "Beszélgetés alapú foglalás AI-powered interakcióval. Modern és interaktív.",
-    icon: MessageSquare,
-    features: [
-      "Természetes beszélgetés",
-      "AI-vezérelt kérdések",
-      "Személyre szabott élmény",
-      "Intelligens javaslatok",
-    ],
     previewUrl: "https://www.bukio.hu/booking/chatbot",
     demoUrl: "https://www.bukio.hu/booking/chatbot",
   },
 ];
 
-const accountFeatures = [
-  {
-    icon: Repeat,
-    title: "Korlátlan váltogatás",
-    description:
-      "Bármikor válts az űrlaptípusok között. Tedd azt, ami az éttermedhez legjobban passzol.",
-  },
-  {
-    icon: Palette,
-    title: "20+ előre készített szín",
-    description:
-      "Használd az összes megadott színskálánkat. Szépek, professzionálisak és teszteltek.",
-  },
-  {
-    icon: Sparkles,
-    title: "Saját arculat",
-    description:
-      "Kérésre összehangoztuk az űrlapokat az éttermed logójával és színeivel.",
-  },
-];
+const accountFeatureIcons = [Repeat, Palette, Sparkles];
 
-export default function BookingForms() {
+export default function BookingForms({ dict }: BookingFormsProps) {
   return (
     <section id="booking-forms" className="py-24 md:py-32 bg-[#f8faf9]">
       <div className="mx-auto max-w-[1280px] px-6 md:px-8">
@@ -92,34 +67,35 @@ export default function BookingForms() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
             <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-            Űrlap típusok
+            {dict.badge}
           </div>
           <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-gray-900 leading-tight mb-5 tracking-[-0.02em]">
-            Foglalási <span className="text-[#0d5e4b]">űrlapok</span>
+            {dict.title}{" "}
+            <span className="text-[#0d5e4b]">{dict.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Válassz 3 különböző űrlap típus közül. Minden sablon teljesen
-            testreszabható és azonnal használható.
+            {dict.description}
           </p>
         </div>
 
         {/* Form Types */}
         <div className="grid md:grid-cols-3 gap-6">
-          {formTypes.map((form) => {
-            const Icon = form.icon;
+          {dict.formTypes.map((form, index) => {
+            const Icon = formTypeIcons[index];
+            const urls = formTypeUrls[index];
             return (
               <div
-                key={form.id}
+                key={index}
                 className={`group relative bg-white rounded-2xl border transition-all duration-300 overflow-hidden hover:shadow-[0_20px_40px_-12px_rgba(13,94,75,0.15)] ${
-                  form.popular
+                  urls.popular
                     ? "border-[#0d5e4b] shadow-lg"
                     : "border-gray-100 hover:border-[#0d5e4b]/20"
                 }`}
               >
                 {/* Popular badge */}
-                {form.popular && (
+                {urls.popular && form.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-[#0d5e4b] text-white text-xs font-semibold rounded-full">
-                    Népszerű
+                    {form.popular}
                   </div>
                 )}
 
@@ -166,15 +142,15 @@ export default function BookingForms() {
 
                   {/* Buttons - Mobile: stacked, Desktop: side by side */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-                    {form.previewUrl ? (
+                    {urls.previewUrl ? (
                       <Link
-                        href={form.previewUrl}
+                        href={urls.previewUrl}
                         target="_blank"
                         className="flex-1 px-4 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 text-white text-center bg-[#0d5e4b] hover:bg-[#0a4a3a] hover:shadow-lg"
                       >
                         <span className="flex items-center justify-center gap-2">
                           <Eye className="w-4 h-4" />
-                          Megtekintés
+                          {dict.buttons.preview}
                         </span>
                       </Link>
                     ) : (
@@ -184,19 +160,19 @@ export default function BookingForms() {
                       >
                         <span className="flex items-center justify-center gap-2">
                           <Eye className="w-4 h-4" />
-                          Megtekintés
+                          {dict.buttons.preview}
                         </span>
                       </button>
                     )}
-                    {form.demoUrl ? (
+                    {urls.demoUrl ? (
                       <Link
-                        href={form.demoUrl}
+                        href={urls.demoUrl}
                         target="_blank"
                         className="flex-1 px-4 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 border-2 border-[#0d5e4b] text-[#0d5e4b] text-center hover:bg-[#0d5e4b] hover:text-white"
                       >
                         <span className="flex items-center justify-center gap-2">
                           <Play className="w-4 h-4" />
-                          Kipróbálás
+                          {dict.buttons.demo}
                         </span>
                       </Link>
                     ) : (
@@ -206,7 +182,7 @@ export default function BookingForms() {
                       >
                         <span className="flex items-center justify-center gap-2">
                           <Play className="w-4 h-4" />
-                          Kipróbálás
+                          {dict.buttons.demo}
                         </span>
                       </button>
                     )}
@@ -222,14 +198,14 @@ export default function BookingForms() {
           <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
             <div className="text-center mb-8">
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Saját fiókodban
+                {dict.account.title}
               </h3>
-              <p className="text-gray-500 text-sm">Minden csomag tartalmazza</p>
+              <p className="text-gray-500 text-sm">{dict.account.subtitle}</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {accountFeatures.map((feature, index) => {
-                const Icon = feature.icon;
+              {dict.account.features.map((feature, index) => {
+                const Icon = accountFeatureIcons[index];
                 return (
                   <div key={index} className="text-center md:text-left">
                     <div className="w-10 h-10 mx-auto md:mx-0 mb-4 bg-[#0d5e4b]/10 rounded-xl flex items-center justify-center">

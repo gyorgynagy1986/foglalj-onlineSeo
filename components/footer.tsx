@@ -1,6 +1,45 @@
 import Link from "next/link";
 
-export default function Footer() {
+interface FooterProps {
+  dict: {
+    brand: {
+      name: string;
+      description: string;
+    };
+    sections: {
+      product: {
+        title: string;
+        links: Array<{
+          text: string;
+          href: string;
+        }>;
+      };
+      support: {
+        title: string;
+        links: Array<{
+          text: string;
+          href: string;
+        }>;
+      };
+      legal: {
+        title: string;
+        links: Array<{
+          text: string;
+          href: string;
+        }>;
+      };
+    };
+    bottom: {
+      copyright: string;
+      madeWith: string;
+      location: string;
+    };
+  };
+}
+
+export default function Footer({ dict }: FooterProps) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       className="text-white py-16 pb-8 relative overflow-hidden"
@@ -27,21 +66,21 @@ export default function Footer() {
                 <span className="text-[#0d5e4b] font-bold text-lg">F</span>
               </div>
               <span className="text-xl font-bold text-white">
-                FoglaljOnline
+                {dict.brand.name}
               </span>
             </div>
             <p className="text-[0.95rem] text-white/60 leading-relaxed max-w-[280px]">
-              Az online foglalási rendszer magyar éttermek számára.
-              Automatizálja üzletét és növelje bevételeit.
+              {dict.brand.description}
             </p>
 
-            {/* Social links placeholder */}
+            {/* Social links */}
             <div className="flex items-center gap-3 mt-6">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white/70 hover:bg-white/20 hover:text-white transition-all duration-300"
+                aria-label="Facebook"
               >
                 <svg
                   className="w-5 h-5"
@@ -56,6 +95,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white/70 hover:bg-white/20 hover:text-white transition-all duration-300"
+                aria-label="Instagram"
               >
                 <svg
                   className="w-5 h-5"
@@ -68,86 +108,69 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Termék */}
+          {/* Product */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
-              Termék
+              {dict.sections.product.title}
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="https://www.bukio.hu/osszes-asztalfoglalas-funkcio"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Összes funkció
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#pricing"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Árazás
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#booking-forms"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Űrlap típusok
-                </Link>
-              </li>
+              {dict.sections.product.links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Támogatás */}
+          {/* Support */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
-              Támogatás
+              {dict.sections.support.title}
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="#contact"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Kapcsolat
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#faq"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  GYIK
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="mailto:hello@foglaljonline.hu"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  hello@foglaljonline.hu
-                </a>
-              </li>
+              {dict.sections.support.links.map((link, index) => (
+                <li key={index}>
+                  {link.href.startsWith("mailto:") ? (
+                    <a
+                      href={link.href}
+                      className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
+                    >
+                      {link.text}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
+                    >
+                      {link.text}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Jogi */}
+          {/* Legal */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
-              Jogi
+              {dict.sections.legal.title}
             </h4>
             <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/adatkezeles"
-                  className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
-                >
-                  Adatkezelés
-                </Link>
-              </li>
+              {dict.sections.legal.links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -155,7 +178,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>
-            © {new Date().getFullYear()} FoglaljOnline by{" "}
+            © {currentYear} {dict.brand.name} by{" "}
             <Link
               href="https://www.bukio.hu"
               target="_blank"
@@ -164,12 +187,12 @@ export default function Footer() {
             >
               Bukio
             </Link>
-            . Minden jog fenntartva.
+            . {dict.bottom.copyright}
           </p>
           <p className="flex items-center gap-1.5">
-            Készült
+            {dict.bottom.madeWith}
             <span className="text-red-400">❤️</span>
-            -vel Magyarországon
+            {dict.bottom.location}
           </p>
         </div>
       </div>

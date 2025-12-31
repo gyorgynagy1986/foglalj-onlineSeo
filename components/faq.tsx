@@ -3,50 +3,24 @@
 import { useState, useEffect, useRef } from "react";
 import { Plus, Minus } from "lucide-react";
 
-const faqs = [
-  {
-    question: "Mennyi idő a bevezetés?",
-    answer:
-      "Átlagosan 1–2 munkanap alatt beüzemeljük a rendszert. Meglévő adatok importálása esetén 3–5 napot vesz igénybe a teljes migráció. A bevezetés során végig segítünk.",
-  },
-  {
-    question: "Mi történik a próbaidőszak után?",
-    answer:
-      "A 30 napos próbaidőszak végén elemezzük a használatot és személyre szabott árajánlatot készítünk. Nincs automatikus számlázás – csak akkor fizetsz, ha elégedett vagy és folytatni szeretnéd.",
-  },
-  {
-    question: "Van hűségidő vagy hosszú távú szerződés?",
-    answer:
-      "Nincs hűségidő. A szolgáltatás havi alapon működik és bármikor lemondható. Nem kötünk hosszú távú szerződéseket – a minőséggel szeretnénk megtartani ügyfeleinket.",
-  },
-  {
-    question: "Hogyan működik pontosan az árazás?",
-    answer:
-      "Csak azért fizetsz, amit ténylegesen használsz. Az árat a foglalások száma, az éttermek és területek mennyisége, valamint a használt funkciók határozzák meg. Nincsenek rejtett költségek.",
-  },
-  {
-    question: "Milyen támogatást kapok?",
-    answer:
-      "Magyar nyelvű email és telefonos támogatás érhető el. Emellett részletes dokumentációt és videó oktatóanyagokat biztosítunk. Prémium ügyfeleknek dedikált account manager is jár.",
-  },
-  {
-    question: "Lehet-e importálni meglévő adatokat?",
-    answer:
-      "Igen, segítünk az adatok migrációjában más rendszerekből. CSV és Excel importálás is elérhető. Vendéglisták, foglalási előzmények – mindent áthozunk.",
-  },
-  {
-    question: "A rendszer GDPR kompatibilis?",
-    answer:
-      "Igen, teljes mértékben megfelelünk a GDPR előírásainak. Az adatok EU-n belüli szervereken tárolódnak, és biztosítjuk az összes szükséges adatvédelmi funkciót.",
-  },
-  {
-    question: "Használhatom mobiltelefonról is?",
-    answer:
-      "Igen, a rendszer teljesen reszponzív és mobilbarát. Mind az admin felület, mind a vendégek foglalási felülete tökéletesen működik telefonon és tableten is.",
-  },
-];
+interface FAQProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    faqs: Array<{
+      question: string;
+      answer: string;
+    }>;
+    cta: {
+      text: string;
+      button: string;
+    };
+  };
+}
 
-export default function FAQ() {
+export default function FAQ({ dict }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -81,19 +55,20 @@ export default function FAQ() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
             <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-            GYIK
+            {dict.badge}
           </div>
           <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-gray-900 leading-tight mb-5 tracking-[-0.02em]">
-            Gyakran ismételt <span className="text-[#0d5e4b]">kérdések</span>
+            {dict.title}{" "}
+            <span className="text-[#0d5e4b]">{dict.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            A legfontosabb kérdések és válaszok a szolgáltatásról.
+            {dict.subtitle}
           </p>
         </header>
 
         {/* FAQ Items */}
         <div className="grid grid-cols-1 gap-3 max-w-[800px] mx-auto">
-          {faqs.map((faq, index) => {
+          {dict.faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
@@ -160,14 +135,12 @@ export default function FAQ() {
           }`}
           style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
         >
-          <p className="text-gray-600 mb-4">
-            Nem találta meg a választ a kérdésére?
-          </p>
+          <p className="text-gray-600 mb-4">{dict.cta.text}</p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 text-[#0d5e4b] font-semibold rounded-xl border-2 border-[#0d5e4b] hover:bg-[#0d5e4b] hover:text-white transition-all duration-300"
           >
-            Írjon nekünk
+            {dict.cta.button}
             <svg
               className="w-4 h-4"
               fill="none"

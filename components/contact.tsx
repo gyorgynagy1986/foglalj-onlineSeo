@@ -12,7 +12,65 @@ import {
 } from "lucide-react";
 import { sendContactEmail } from "@/lib/actions/contact";
 
-export default function Contact() {
+interface ContactProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    subtitle: string;
+    contactInfo: {
+      phoneLabel: string;
+      phoneNumber: string;
+      emailLabel: string;
+      emailAddress: string;
+    };
+    responseTime: {
+      label: string;
+      text: string;
+    };
+    form: {
+      title: string;
+      fields: {
+        name: {
+          label: string;
+          placeholder: string;
+        };
+        company: {
+          label: string;
+          placeholder: string;
+        };
+        email: {
+          label: string;
+          placeholder: string;
+        };
+        phone: {
+          label: string;
+          placeholder: string;
+        };
+        message: {
+          label: string;
+          placeholder: string;
+        };
+      };
+      gdpr: {
+        text: string;
+        linkText: string;
+      };
+      submit: {
+        idle: string;
+        sending: string;
+      };
+      required: string;
+    };
+    feedback: {
+      success: string;
+      error: string;
+      validationError: string;
+    };
+  };
+}
+
+export default function Contact({ dict }: ContactProps) {
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -53,8 +111,7 @@ export default function Contact() {
     if (!formData.name || !formData.email || !formData.gdpr) {
       setFeedback({
         type: "error",
-        message:
-          "Kérjük, töltse ki a kötelező mezőket és fogadja el az adatkezelési tájékoztatót.",
+        message: dict.feedback.validationError,
       });
       return;
     }
@@ -71,8 +128,7 @@ export default function Contact() {
       if (result.success) {
         setFeedback({
           type: "success",
-          message:
-            "Üzenet sikeresen elküldve! Hamarosan felvesszük Önnel a kapcsolatot.",
+          message: dict.feedback.success,
         });
         setFormData({
           name: "",
@@ -85,7 +141,7 @@ export default function Contact() {
       } else {
         setFeedback({
           type: "error",
-          message: result.error || "Hiba történt az üzenet küldésekor.",
+          message: result.error || dict.feedback.error,
         });
       }
     });
@@ -103,47 +159,50 @@ export default function Contact() {
           <div className="fade-in opacity-0 translate-y-6 transition-all duration-600">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
               <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-              Kapcsolat
+              {dict.badge}
             </div>
 
             <h3 className="text-[clamp(1.75rem,3vw,2.25rem)] font-bold text-gray-900 mb-4 tracking-[-0.02em]">
-              Vegye fel velünk a{" "}
-              <span className="text-[#0d5e4b]">kapcsolatot</span>
+              {dict.title}{" "}
+              <span className="text-[#0d5e4b]">{dict.titleHighlight}</span>
             </h3>
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-              Kérdése van? Segítünk megtalálni a legjobb megoldást az étterme
-              számára.
+              {dict.subtitle}
             </p>
 
             <div className="flex flex-col gap-4">
               {/* Phone */}
               <a
-                href="tel:+36306564162"
+                href={`tel:${dict.contactInfo.phoneNumber.replace(/\s/g, "")}`}
                 className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-100 transition-all duration-300 hover:border-[#0d5e4b]/20 hover:shadow-[0_10px_30px_-10px_rgba(13,94,75,0.15)]"
               >
                 <div className="w-12 h-12 flex items-center justify-center bg-[#0d5e4b] rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                   <Phone className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">Telefonszám</div>
+                  <div className="text-sm text-gray-500 mb-1">
+                    {dict.contactInfo.phoneLabel}
+                  </div>
                   <div className="font-semibold text-gray-900 group-hover:text-[#0d5e4b] transition-colors">
-                    +36 30 656 4162
+                    {dict.contactInfo.phoneNumber}
                   </div>
                 </div>
               </a>
 
               {/* Email */}
               <a
-                href="mailto:hello@foglaljonline.hu"
+                href={`mailto:${dict.contactInfo.emailAddress}`}
                 className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-100 transition-all duration-300 hover:border-[#0d5e4b]/20 hover:shadow-[0_10px_30px_-10px_rgba(13,94,75,0.15)]"
               >
                 <div className="w-12 h-12 flex items-center justify-center bg-[#0d5e4b] rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-sm text-gray-500 mb-1">Email</div>
+                  <div className="text-sm text-gray-500 mb-1">
+                    {dict.contactInfo.emailLabel}
+                  </div>
                   <div className="font-semibold text-gray-900 group-hover:text-[#0d5e4b] transition-colors">
-                    hello@foglaljonline.hu
+                    {dict.contactInfo.emailAddress}
                   </div>
                 </div>
               </a>
@@ -153,9 +212,9 @@ export default function Contact() {
             <div className="mt-8 p-4 bg-[#0d5e4b]/5 rounded-xl border border-[#0d5e4b]/10">
               <p className="text-sm text-gray-600">
                 <span className="font-semibold text-[#0d5e4b]">
-                  Gyors válaszidő:
+                  {dict.responseTime.label}
                 </span>{" "}
-                Általában 24 órán belül válaszolunk minden megkeresésre.
+                {dict.responseTime.text}
               </p>
             </div>
           </div>
@@ -166,7 +225,7 @@ export default function Contact() {
             className="fade-in opacity-0 translate-y-6 transition-all duration-600 bg-white p-8 rounded-2xl border border-gray-100 shadow-sm"
           >
             <h4 className="text-xl font-bold text-gray-900 mb-6">
-              Írjon nekünk
+              {dict.form.title}
             </h4>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -175,7 +234,8 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Név <span className="text-red-500">*</span>
+                  {dict.form.fields.name.label}{" "}
+                  <span className="text-red-500">{dict.form.required}</span>
                 </label>
                 <input
                   type="text"
@@ -184,7 +244,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  placeholder="Az Ön neve"
+                  placeholder={dict.form.fields.name.placeholder}
                   className="w-full px-4 py-3 text-[0.95rem] border border-gray-200 rounded-xl bg-white transition-all duration-200 focus:outline-none focus:border-[#0d5e4b] focus:ring-2 focus:ring-[#0d5e4b]/10"
                   required
                   disabled={isPending}
@@ -195,7 +255,7 @@ export default function Contact() {
                   htmlFor="company"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Étterem neve
+                  {dict.form.fields.company.label}
                 </label>
                 <input
                   type="text"
@@ -204,7 +264,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, company: e.target.value })
                   }
-                  placeholder="Étterem neve"
+                  placeholder={dict.form.fields.company.placeholder}
                   className="w-full px-4 py-3 text-[0.95rem] border border-gray-200 rounded-xl bg-white transition-all duration-200 focus:outline-none focus:border-[#0d5e4b] focus:ring-2 focus:ring-[#0d5e4b]/10"
                   disabled={isPending}
                 />
@@ -216,7 +276,8 @@ export default function Contact() {
                 htmlFor="email"
                 className="block text-sm font-semibold text-gray-700 mb-2"
               >
-                Email cím <span className="text-red-500">*</span>
+                {dict.form.fields.email.label}{" "}
+                <span className="text-red-500">{dict.form.required}</span>
               </label>
               <input
                 type="email"
@@ -225,7 +286,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                placeholder="email@example.com"
+                placeholder={dict.form.fields.email.placeholder}
                 className="w-full px-4 py-3 text-[0.95rem] border border-gray-200 rounded-xl bg-white transition-all duration-200 focus:outline-none focus:border-[#0d5e4b] focus:ring-2 focus:ring-[#0d5e4b]/10"
                 required
                 disabled={isPending}
@@ -237,7 +298,7 @@ export default function Contact() {
                 htmlFor="phone"
                 className="block text-sm font-semibold text-gray-700 mb-2"
               >
-                Telefonszám
+                {dict.form.fields.phone.label}
               </label>
               <input
                 type="tel"
@@ -246,7 +307,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
-                placeholder="+36 20 123 4567"
+                placeholder={dict.form.fields.phone.placeholder}
                 className="w-full px-4 py-3 text-[0.95rem] border border-gray-200 rounded-xl bg-white transition-all duration-200 focus:outline-none focus:border-[#0d5e4b] focus:ring-2 focus:ring-[#0d5e4b]/10"
                 disabled={isPending}
               />
@@ -257,7 +318,7 @@ export default function Contact() {
                 htmlFor="message"
                 className="block text-sm font-semibold text-gray-700 mb-2"
               >
-                Üzenet
+                {dict.form.fields.message.label}
               </label>
               <textarea
                 id="message"
@@ -265,7 +326,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }
-                placeholder="Írja le kérdését vagy igényeit..."
+                placeholder={dict.form.fields.message.placeholder}
                 rows={4}
                 className="w-full px-4 py-3 text-[0.95rem] border border-gray-200 rounded-xl bg-white transition-all duration-200 focus:outline-none focus:border-[#0d5e4b] focus:ring-2 focus:ring-[#0d5e4b]/10 resize-y min-h-[120px]"
                 disabled={isPending}
@@ -288,15 +349,14 @@ export default function Contact() {
                 htmlFor="gdpr"
                 className="text-sm text-gray-600 leading-relaxed"
               >
-                Elfogadom az{" "}
+                {dict.form.gdpr.text}{" "}
                 <a
                   href="/adatkezeles"
                   className="text-[#0d5e4b] font-medium hover:underline"
                 >
-                  adatkezelési tájékoztatót
-                </a>{" "}
-                és hozzájárulok személyes adataim kezeléséhez.{" "}
-                <span className="text-red-500">*</span>
+                  {dict.form.gdpr.linkText}
+                </a>
+                . <span className="text-red-500">{dict.form.required}</span>
               </label>
             </div>
 
@@ -308,12 +368,12 @@ export default function Contact() {
               {isPending ? (
                 <>
                   <Loader2 className="w-5 h-5 animate-spin" />
-                  Küldés...
+                  {dict.form.submit.sending}
                 </>
               ) : (
                 <>
                   <Send className="w-5 h-5" />
-                  Üzenet küldése
+                  {dict.form.submit.idle}
                 </>
               )}
             </button>

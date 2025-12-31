@@ -13,64 +13,38 @@ import {
   TabletSmartphone,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: Calendar,
-    title: "Intelligens foglalási rendszer",
-    description:
-      "Automatizált asztalkezelés, területek kezelése és valós idejű kapacitás optimalizálás.",
-  },
-  {
-    icon: Users,
-    title: "Professzionális vendégkezelés",
-    description:
-      "Részletes vendégprofilok, foglalási előzmények és személyre szabott szolgáltatások.",
-  },
-  {
-    icon: BarChart3,
-    title: "Üzleti analitika",
-    description:
-      "Részletes jelentések, bevétel elemzés és teljesítmény mutatók valós időben.",
-  },
-  {
-    icon: Mail,
-    title: "Email automatizálás",
-    description:
-      "Automatikus emlékeztetők, megerősítések és visszajelzés kérések.",
-  },
-  {
-    icon: Bell,
-    title: "Böngésző értesítések",
-    description:
-      "Push értesítések új foglalásokról, módosításokról és lemondásokról valós időben.",
-  },
-  {
-    icon: Smartphone,
-    title: "QR-kódos bejelentkezés",
-    description:
-      "Vendégei egyedi QR-kódot kapnak – érkezéskor egyetlen beolvasással ellenőrizhető.",
-  },
-  {
-    icon: Clock,
-    title: "Dinamikus időszabályok",
-    description:
-      "Automatikusan állítsa be a foglalás időtartamát a vendégszám alapján.",
-  },
-  {
-    icon: Settings,
-    title: "Testreszabható szabályok",
-    description:
-      "Rugalmas nyitvatartás, speciális napok és egyedi foglalási feltételek.",
-  },
-  {
-    icon: TabletSmartphone,
-    title: "Mobilbarát felület",
-    description:
-      "Reszponzív design minden eszközön – vendégei bárhonnan foglalhatnak.",
-  },
+interface FeaturesProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    description: string;
+    features: Array<{
+      title: string;
+      description: string;
+    }>;
+    learnMore: string;
+    bottomCta: {
+      question: string;
+      subtitle: string;
+      button: string;
+    };
+  };
+}
+
+const featureIcons = [
+  Calendar,
+  Users,
+  BarChart3,
+  Mail,
+  Bell,
+  Smartphone,
+  Clock,
+  Settings,
+  TabletSmartphone,
 ];
 
-export default function Features() {
+export default function Features({ dict }: FeaturesProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -102,22 +76,21 @@ export default function Features() {
         <header className="text-center max-w-[680px] mx-auto mb-16 fade-in opacity-0 translate-y-6 transition-all duration-600">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
             <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-            Funkciók
+            {dict.badge}
           </div>
           <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-gray-900 leading-tight mb-5 tracking-[-0.02em]">
-            Minden, ami egy modern
-            <span className="text-[#0d5e4b]"> étteremnek</span> kell
+            {dict.title}
+            <span className="text-[#0d5e4b]"> {dict.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Komplex megoldás a foglaláskezeléstől az üzleti analitikáig – egy
-            helyen.
+            {dict.description}
           </p>
         </header>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+          {dict.features.map((feature, index) => {
+            const Icon = featureIcons[index];
             return (
               <article
                 key={index}
@@ -139,7 +112,7 @@ export default function Features() {
 
                 {/* Subtle arrow on hover */}
                 <div className="mt-4 flex items-center gap-2 text-[#0d5e4b] text-sm font-medium opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  Részletek
+                  {dict.learnMore}
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -164,17 +137,17 @@ export default function Features() {
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm">
             <div className="text-left">
               <p className="text-gray-900 font-semibold">
-                Szeretné kipróbálni az összes funkciót?
+                {dict.bottomCta.question}
               </p>
               <p className="text-gray-500 text-sm">
-                30 napig ingyenesen, bankkártya nélkül.
+                {dict.bottomCta.subtitle}
               </p>
             </div>
+            
             <a
-              href="#demo"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-[#0d5e4b] text-white hover:bg-[#0a4a3a] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap"
             >
-              Ingyenes próba
+              {dict.bottomCta.button}
               <svg
                 className="w-4 h-4"
                 fill="none"

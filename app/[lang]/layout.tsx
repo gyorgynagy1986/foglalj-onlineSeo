@@ -1,8 +1,9 @@
-import type React from "react";
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { getDictionary } from "@/app/[lang]/dictionaries";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
       "Automatizált foglaláskezelés, asztaltérkép és vendégprofilok. 500+ étterem választása. Próbálja ki 30 napig ingyen!",
     images: [
       {
-        url: "/og-image.png", 
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "FoglaljOnline Szoftver Bemutató",
@@ -147,14 +148,21 @@ const jsonLd = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface RootLayoutProps {
+  children: ReactNode;
+  params: Promise<{ lang?: string }>;
+}
+
+export default async function RootLayout(props: RootLayoutProps) {
+  // A params aszinkron feloldása (Next.js 15+ konvenció)
+  const params = await props.params;
+  const { children } = props;
+
+  const { lang = "hu" } = params;
+
   return (
     <html
-      lang="hu"
+      lang={lang}
       className={`${dmSans.variable} ${playfairDisplay.variable}`}
     >
       <head>

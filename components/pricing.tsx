@@ -4,55 +4,36 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Rocket, Search, Briefcase, ArrowRight, Check } from "lucide-react";
 
-const steps = [
-  {
-    number: "1",
-    icon: Rocket,
-    title: "30 Nap Ingyenes Próba",
-    description:
-      "Teljes hozzáférés minden funkcióhoz korlátlanul. Nincs rejtett költség, nincs kötöttség.",
-    features: [
-      "Korlátlan étterem és terület",
-      "Korlátlan foglalás kezelés",
-      "Minden funkció elérhető",
-      "Teljes testreszabhatóság",
-      "Prioritás támogatás",
-    ],
-    featured: false,
-  },
-  {
-    number: "2",
-    icon: Search,
-    title: "Használat Monitorozás",
-    description:
-      "A próbaidőszak alatt részletesen elemezzük a rendszer használatát.",
-    features: [
-      "Foglalások száma és típusa",
-      "Éttermek és területek száma",
-      "Használt funkciók gyakorisága",
-      "Email és SMS forgalom",
-      "Támogatási igények",
-    ],
-    featured: true,
-  },
-  {
-    number: "3",
-    icon: Briefcase,
-    title: "Személyre Szabott Ajánlat",
-    description:
-      "A használati adatok alapján készítünk egy teljesen személyre szabott árajánlatot.",
-    features: [
-      "Valós használat alapú ár",
-      "Átlátható költségstruktúra",
-      "Rugalmas fizetési lehetőségek",
-      "Skálázható megoldás",
-      "Hosszú távú partnerség",
-    ],
-    featured: false,
-  },
+interface PricingProps {
+  dict: {
+    badge: string;
+    title: string;
+    titleHighlight: string;
+    description: string;
+    steps: Array<{
+      title: string;
+      description: string;
+      features: string[];
+      currentBadge?: string;
+    }>;
+    cta: {
+      title: string;
+      subtitle: string;
+      primaryButton: string;
+      secondaryButton: string;
+    };
+  };
+}
+
+const stepIcons = [Rocket, Search, Briefcase];
+
+const stepConfig = [
+  { featured: false },
+  { featured: true },
+  { featured: false },
 ];
 
-export default function Pricing() {
+export default function Pricing({ dict }: PricingProps) {
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -80,15 +61,14 @@ export default function Pricing() {
         <header className="text-center max-w-[680px] mx-auto mb-16 fade-in opacity-0 translate-y-6 transition-all duration-600">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0d5e4b]/10 rounded-full text-[#0d5e4b] font-semibold text-sm mb-6">
             <span className="w-1.5 h-1.5 bg-[#0d5e4b] rounded-full" />
-            Árazás
+            {dict.badge}
           </div>
           <h2 className="text-[clamp(2rem,4vw,2.75rem)] font-bold text-gray-900 leading-tight mb-5 tracking-[-0.02em]">
-            Fizess csak azért, amit{" "}
-            <span className="text-[#0d5e4b]">használsz</span>
+            {dict.title}{" "}
+            <span className="text-[#0d5e4b]">{dict.titleHighlight}</span>
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            30 napos ingyenes próbaidőszak alatt megfigyeljük a használatot,
-            majd személyre szabott árajánlatot készítünk az igényeid alapján.
+            {dict.description}
           </p>
         </header>
 
@@ -104,13 +84,14 @@ export default function Pricing() {
 
         {/* Steps Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
-          {steps.map((step, index) => {
-            const Icon = step.icon;
+          {dict.steps.map((step, index) => {
+            const Icon = stepIcons[index];
+            const config = stepConfig[index];
             return (
               <div
                 key={index}
                 className={`fade-in opacity-0 translate-y-6 transition-all duration-600 group relative bg-white border rounded-2xl p-8 hover:shadow-[0_20px_40px_-12px_rgba(13,94,75,0.15)] ${
-                  step.featured
+                  config.featured
                     ? "border-[#0d5e4b] shadow-lg md:-mt-4 md:mb-4"
                     : "border-gray-100 hover:border-[#0d5e4b]/20"
                 }`}
@@ -119,18 +100,18 @@ export default function Pricing() {
                 {/* Step number */}
                 <span
                   className={`absolute -top-4 left-8 w-8 h-8 flex items-center justify-center font-bold text-sm rounded-full transition-colors ${
-                    step.featured
+                    config.featured
                       ? "bg-[#0d5e4b] text-white"
                       : "bg-gray-100 text-gray-600 group-hover:bg-[#0d5e4b] group-hover:text-white"
                   }`}
                 >
-                  {step.number}
+                  {index + 1}
                 </span>
 
                 {/* Featured badge */}
-                {step.featured && (
+                {config.featured && step.currentBadge && (
                   <span className="absolute -top-4 right-8 px-3 py-1 bg-emerald-50 text-[#0d5e4b] text-xs font-semibold rounded-full">
-                    Aktuális
+                    {step.currentBadge}
                   </span>
                 )}
 
@@ -184,11 +165,10 @@ export default function Pricing() {
 
             <div className="relative z-10 text-center">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                Kezdje el most az ingyenes próbaidőszakot
+                {dict.cta.title}
               </h3>
               <p className="text-white/70 mb-8 max-w-lg mx-auto">
-                Semmilyen kötelezettség nélkül – bankkártya sem kell a
-                regisztrációhoz.
+                {dict.cta.subtitle}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -198,14 +178,14 @@ export default function Pricing() {
                   rel="noopener nofollow"
                   className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold no-underline rounded-xl cursor-pointer transition-all duration-300 bg-white text-[#0d5e4b] hover:bg-emerald-50 hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
                 >
-                  Ingyenes próba indítása
+                  {dict.cta.primaryButton}
                   <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
                   href="#contact"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold no-underline rounded-xl cursor-pointer transition-all duration-300 bg-transparent text-white border-2 border-white/30 hover:bg-white/10 hover:border-white/50"
                 >
-                  Kérdésem van
+                  {dict.cta.secondaryButton}
                 </Link>
               </div>
             </div>
