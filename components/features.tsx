@@ -13,6 +13,8 @@ import {
   TabletSmartphone,
 } from "lucide-react";
 
+import Link from "next/link";
+
 interface FeaturesProps {
   dict: {
     badge: string;
@@ -22,6 +24,7 @@ interface FeaturesProps {
     features: Array<{
       title: string;
       description: string;
+      link: string;
     }>;
     learnMore: string;
     bottomCta: {
@@ -90,7 +93,10 @@ export default function Features({ dict }: FeaturesProps) {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {dict.features.map((feature, index) => {
-            const Icon = featureIcons[index];
+          
+          console.log(feature.link)
+          
+          const Icon = featureIcons[index];
             return (
               <article
                 key={index}
@@ -112,7 +118,7 @@ export default function Features({ dict }: FeaturesProps) {
 
                 {/* Subtle arrow on hover */}
                 <div className="mt-4 flex items-center gap-2 text-[#0d5e4b] text-sm font-medium opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  {dict.learnMore}
+                  <Link href={`${feature?.link}`}>{dict.learnMore}</Link> 
                   <svg
                     className="w-4 h-4"
                     fill="none"

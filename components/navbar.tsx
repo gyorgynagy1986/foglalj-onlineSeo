@@ -38,7 +38,7 @@ interface NavbarProps {
 const languages = [
   { code: "hu", name: "Magyar", flag: "🇭🇺" },
   { code: "en", name: "English", flag: "🇬🇧" },
-
+  { code: "es", name: "Español", flag: "🇪🇸" },
 ];
 
 export default function Navbar({ dict, lang }: NavbarProps) {
@@ -55,7 +55,8 @@ export default function Navbar({ dict, lang }: NavbarProps) {
     { href: "#contact", label: dict.links.contact },
   ];
 
-  const currentLanguage = languages.find((l) => l.code === lang) || languages[0];
+  const currentLanguage =
+    languages.find((l) => l.code === lang) || languages[0];
 
   useEffect(() => {
     const handleScroll = () => {

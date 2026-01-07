@@ -7,7 +7,16 @@ interface FooterProps {
       description: string;
     };
     sections: {
-      product: {
+      features: {
+        // Átnevezve Product-ról Features-re a kérésednek megfelelően
+        title: string;
+        links: Array<{
+          text: string;
+          href: string;
+        }>;
+      };
+      resources: {
+        // ÚJ: Ide jön a Blog, Tudástár, E-book
         title: string;
         links: Array<{
           text: string;
@@ -16,6 +25,7 @@ interface FooterProps {
       };
       support: {
         title: string;
+        description?: string; // Opcionális, ha kellene alá kis szöveg
         links: Array<{
           text: string;
           href: string;
@@ -57,10 +67,11 @@ export default function Footer({ dict }: FooterProps) {
         }}
       />
 
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand */}
-          <div>
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-8">
+        {/* GRID MÓDOSÍTÁS: lg:grid-cols-5, hogy elférjen az új oszlop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+          {/* 1. Brand Section */}
+          <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
                 <span className="text-[#0d5e4b] font-bold text-lg">F</span>
@@ -108,13 +119,13 @@ export default function Footer({ dict }: FooterProps) {
             </div>
           </div>
 
-          {/* Product */}
+          {/* 2. Features (Funkciók) */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
-              {dict.sections.product.title}
+              {dict.sections.features.title}
             </h4>
             <ul className="space-y-3">
-              {dict.sections.product.links.map((link, index) => (
+              {dict.sections.features.links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
@@ -127,7 +138,26 @@ export default function Footer({ dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* 3. Resources (Blog & Források) - ÚJ SZEKCIÓ */}
+          <div>
+            <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
+              {dict.sections.resources.title}
+            </h4>
+            <ul className="space-y-3">
+              {dict.sections.resources.links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 4. Support */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
               {dict.sections.support.title}
@@ -135,7 +165,8 @@ export default function Footer({ dict }: FooterProps) {
             <ul className="space-y-3">
               {dict.sections.support.links.map((link, index) => (
                 <li key={index}>
-                  {link.href.startsWith("mailto:") ? (
+                  {link.href.startsWith("mailto:") ||
+                  link.href.startsWith("tel:") ? (
                     <a
                       href={link.href}
                       className="text-white/60 no-underline text-[0.95rem] transition-colors duration-200 hover:text-emerald-300"
@@ -155,7 +186,7 @@ export default function Footer({ dict }: FooterProps) {
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* 5. Legal */}
           <div>
             <h4 className="text-white text-sm font-semibold uppercase tracking-wider mb-5">
               {dict.sections.legal.title}
@@ -180,12 +211,12 @@ export default function Footer({ dict }: FooterProps) {
           <p>
             © {currentYear} {dict.brand.name} by{" "}
             <Link
-              href="https://www.bukio.hu"
+              href="https://www.foglaljonline.hu"
               target="_blank"
               rel="noopener"
               className="text-white/70 no-underline hover:text-emerald-300 transition-colors"
             >
-              Bukio
+              FoglaljOnline
             </Link>
             . {dict.bottom.copyright}
           </p>

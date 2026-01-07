@@ -1,0 +1,1520 @@
+{
+  "mobilbarat": {
+    "metadata": {
+      "title": "Mobilbarát Felület | FoglaljOnline",
+      "description": "Tökéletes élmény minden eszközön. Vendégek mobilról foglalnak, te tableten vagy számítógépen kezeled. Reszponzív design, gyors betöltés."
+    },
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Mobilbarát felület"
+    },
+    "hero": {
+      "badge": "Reszponzív Design",
+      "title": "Foglalás bárhonnan,",
+      "titleHighlight": "bármilyen eszközről",
+      "description": "Vendégeid mobilról gyorsan és kényelmesen foglalhatnak. Te pedig tableten vagy számítógépen könnyedén kezeled a foglalásokat. Tökéletes élmény minden eszközön.",
+      "ctaPrimary": "Ingyenes próba",
+      "ctaSecondary": "Demó kérése"
+    },
+    "stats": [
+      {
+        "value": "78%",
+        "label": "Foglalások mobilról",
+        "description": "A vendégek többsége telefonról foglal"
+      },
+      {
+        "value": "3 mp",
+        "label": "Átlagos betöltési idő",
+        "description": "Villámgyors élmény minden eszközön"
+      },
+      {
+        "value": "94%",
+        "label": "Mobilra optimalizált",
+        "description": "Tökéletes élmény kis képernyőn is"
+      }
+    ],
+    "features": [
+      {
+        "title": "Mobil foglalás másodpercek alatt",
+        "description": "Vendégeid gyorsan és kényelmesen foglalhatnak telefonról. Egyszerű, intuitív folyamat.",
+        "color": "bg-blue-50 text-blue-600"
+      },
+      {
+        "title": "Tablet kezelőfelület",
+        "description": "Vendéglátóhelyek tableten kezelhetik a foglalásokat. Érintésre optimalizált admin felület.",
+        "color": "bg-emerald-50 text-emerald-600"
+      },
+      {
+        "title": "Desktop teljes kontroll",
+        "description": "Számítógépen részletes statisztikák, beállítások és komplett irányítás.",
+        "color": "bg-purple-50 text-purple-600"
+      },
+      {
+        "title": "Villámgyors betöltés",
+        "description": "Optimalizált kód, gyors válaszidő. Vendégeid nem várnak, azonnal foglalhatnak.",
+        "color": "bg-amber-50 text-amber-600"
+      }
+    ],
+    "mobileExperience": {
+      "imageAlt": "Vendég foglal mobilon",
+      "title": "Vendégeid imádni fogják",
+      "description": "78% a foglalásoknak mobilról érkezik. A modern vendégek telefonról intéznek mindent – így kell nekik is a foglalási élmény.",
+      "features": [
+        {
+          "title": "Egyszerű navigáció",
+          "description": "Nagy gombok, tiszta elrendezés, könnyen kezelhető"
+        },
+        {
+          "title": "Gyors adatbevitel",
+          "description": "Mobilra optimalizált űrlapok, autofill támogatás"
+        },
+        {
+          "title": "Érintésre optimalizált",
+          "description": "Minden elem ujjal könnyen elérhető és használható"
+        },
+        {
+          "title": "Offline ellenőrzés",
+          "description": "QR-kód és foglalási adatok offline is elérhetők"
+        }
+      ],
+      "highlight": {
+        "title": "Vendégélmény a középpontban",
+        "description": "Egyszerű, gyors, intuitív. Vendégeid percek alatt lefoglalják az asztalt – bármikor, bárhonnan, bármilyen eszközről."
+      }
+    },
+    "tabletManagement": {
+      "title": "Tableten kezeld",
+      "titleHighlight": "a foglalásokat",
+      "subtitle": "Érintésre optimalizált admin felület étteremhez, kávézóhoz, bárhoz",
+      "features": [
+        {
+          "title": "Érintéses kezelés",
+          "description": "Asztalok, foglalások, státuszok ujjal egyszerűen"
+        },
+        {
+          "title": "Gyors módosítás",
+          "description": "Asztalváltás, időpontok, vendégszám egy érintéssel"
+        },
+        {
+          "title": "Valós idejű frissítés",
+          "description": "Azonnal látod az új foglalásokat és változásokat"
+        },
+        {
+          "title": "Kompakt nézet",
+          "description": "Napi foglalások áttekintése egy képernyőn"
+        }
+      ],
+      "useCase": {
+        "title": "Ideális recepciós asztalra",
+        "description": "Tablet állvány az asztalon, vendégek érkeznek, egyetlen érintéssel check-in. QR-kód beolvasás, foglalás jóváhagyás, asztal hozzárendelés – minden gyorsan és egyszerűen."
+      }
+    },
+    "deviceShowcase": {
+      "title": "Minden eszközön",
+      "titleHighlight": "tökéletesen működik",
+      "subtitle": "Automatikus alkalmazkodás a képernyő méretéhez. Nincs külön app, nincs letöltés – csak nyisd meg a böngészőt.",
+      "devices": [
+        {
+          "title": "Mobil (Vendégek)",
+          "features": [
+            "Gyors foglalás útközben",
+            "QR-kód mentése",
+            "Foglalás módosítás",
+            "Lemondás egy kattintással"
+          ],
+          "color": "bg-blue-50 text-blue-600"
+        },
+        {
+          "title": "Tablet (Étterem)",
+          "features": [
+            "Érintéses kezelőfelület",
+            "Asztalok drag & drop",
+            "Napi foglalások áttekintése",
+            "Gyors check-in/check-out"
+          ],
+          "color": "bg-emerald-50 text-emerald-600"
+        },
+        {
+          "title": "Desktop (Admin)",
+          "features": [
+            "Részletes statisztikák",
+            "Komplett beállítások",
+            "Email sablonok szerkesztése",
+            "Exportálás, jelentések"
+          ],
+          "color": "bg-purple-50 text-purple-600"
+        }
+      ]
+    },
+    "performance": {
+      "title": "Villámgyors betöltés",
+      "subtitle": "Optimalizált kód, modern technológia, gyors szerverek",
+      "items": [
+        {
+          "title": "3 másodperc betöltés",
+          "description": "Átlagosan 3 másodperc alatt betölt minden oldal. Vendégeid nem várnak."
+        },
+        {
+          "title": "Mobil optimalizált",
+          "description": "Kis fájlméretek, hatékony kód, gyors mobilinternet esetén is."
+        },
+        {
+          "title": "Folyamatos fejlesztés",
+          "description": "Rendszeres teljesítmény optimalizálás, legújabb technológiák."
+        },
+        {
+          "title": "99.9% uptime",
+          "description": "Megbízható szerverek, stabil működés, mindig elérhető."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Próbáld ki minden eszközödön!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Teszteld telefonon, tableten, számítógépen – mindenhol tökéletes!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kérdésem van"
+    }
+  },
+
+  "szabalyok": {
+    "metadata": {
+      "title": "Testreszabható Szabályok | FoglaljOnline",
+      "description": "50+ beállítási lehetőség: nyitvatartás, asztalkezelés, foglalási limitek, email értesítések. Minden szabályt te határozol meg."
+    },
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Testreszabható szabályok"
+    },
+    "hero": {
+      "badge": "Komplett Szabályrendszer",
+      "title": "Minden szabályt",
+      "titleHighlight": "te határozol meg",
+      "description": "50+ beállítási lehetőség a tökéletes működéshez. Nyitvatartás, asztalkezelés, foglalási limitek, email értesítések – minden egy helyen.",
+      "ctaPrimary": "Ingyenes próba",
+      "ctaSecondary": "Demó kérése"
+    },
+    "demo": {
+      "title": "Szabályok",
+      "titleHighlight": "működés közben",
+      "subtitle": "Kattints a szabálytípusokra és lásd, hogyan működnek",
+      "rules": [
+        {
+          "id": "weekly",
+          "name": "Heti nyitvatartás",
+          "description": "Standard nyitvatartás minden napra",
+          "color": "from-blue-500 to-blue-600",
+          "example": {
+            "title": "Hétfő-Vasárnap beállítások",
+            "visualType": "schedule",
+            "details": []
+          }
+        },
+        {
+          "id": "special",
+          "name": "Speciális napok",
+          "description": "Ünnepnapok és egyedi események",
+          "color": "from-emerald-500 to-emerald-600",
+          "example": {
+            "title": "Ünnepi beállítások",
+            "visualType": "list",
+            "details": [
+              "2025. dec. 24.: 11:00-16:00 (módosított)",
+              "2025. dec. 25-26.: Zárva",
+              "2025. dec. 31.: Csak 6+ fő, 4-6 óra",
+              "2025. jan. 1.: 14:00-22:00"
+            ]
+          }
+        },
+        {
+          "id": "closure",
+          "name": "Zárási időszakok",
+          "description": "Napon belüli szünetek",
+          "color": "from-purple-500 to-purple-600",
+          "example": {
+            "title": "Napi szünetek",
+            "visualType": "grid",
+            "details": [
+              "Minden kedd: 14:30-16:00 (személyzeti)",
+              "Hétköznap: 15:00-17:00 (főzés előkészítés)",
+              "Vasárnap: 16:00-18:00 (takarítás)"
+            ]
+          }
+        },
+        {
+          "id": "duration",
+          "name": "Időtartam szabályok",
+          "description": "Vendégszám alapú időkorlátok",
+          "color": "from-amber-500 to-amber-600",
+          "example": {
+            "title": "Szilveszteri szabályok",
+            "visualType": "grid",
+            "details": [
+              "1-4 fő: Nem foglalható online",
+              "5-6 fő: 3-4 óra választható",
+              "7-10 fő: 4-5 óra választható",
+              "10+ fő: 5-6 óra választható"
+            ]
+          }
+        }
+      ],
+      "scheduleData": [
+        {
+          "day": "Hétfő-Csütörtök",
+          "hours": "11:00 - 23:00",
+          "kitchen": "22:30"
+        },
+        {
+          "day": "Péntek-Szombat",
+          "hours": "11:00 - 01:00",
+          "kitchen": "00:00"
+        },
+        {
+          "day": "Vasárnap",
+          "hours": "12:00 - 22:00",
+          "kitchen": "21:30"
+        }
+      ],
+      "scheduleLabels": {
+        "opening": "Nyitvatartás:",
+        "kitchen": "Konyha zár:"
+      },
+      "keywords": {
+        "closed": "Zárva",
+        "modified": "módosított",
+        "only": "Csak"
+      },
+      "autoApplication": {
+        "label": "Automatikus alkalmazás:",
+        "weekly": "Minden nap automatikusan a megfelelő nyitvatartási idő jelenik meg a foglalási űrlapon.",
+        "special": "Speciális napokon a rendszer automatikusan felülírja az alap nyitvatartást.",
+        "closure": "A zárási időszakok alatt nem lehet foglalást leadni, de az étterem működik.",
+        "duration": "A vendégszám alapján automatikusan jelennek meg az elérhető időtartamok."
+      }
+    },
+    "mainFeatures": [
+      {
+        "title": "Nyitvatartás kezelés",
+        "description": "Heti nyitvatartás, speciális napok, zárási időszakok. Minden nap teljesen testreszabható.",
+        "color": "bg-blue-50 text-blue-600"
+      },
+      {
+        "title": "Asztal kombinálás",
+        "description": "Kisebb asztalok automatikus összevonása nagyobb csoportoknak. Optimális kihasználtság.",
+        "color": "bg-emerald-50 text-emerald-600"
+      },
+      {
+        "title": "Túlterhelés szabályozás",
+        "description": "Maximális túlméretezési arány beállítása. Például: 4 fős asztal max. 5 főnek.",
+        "color": "bg-purple-50 text-purple-600"
+      },
+      {
+        "title": "Vendégszám limitek",
+        "description": "Maximális vendégszám, minimum és maximum foglalási idők, automatikus jóváhagyás.",
+        "color": "bg-amber-50 text-amber-600"
+      }
+    ],
+    "allRules": {
+      "title": "Komplett",
+      "titleHighlight": "beállítási lehetőségek",
+      "subtitle": "50+ szabály és beállítás az éttermed tökéletes működéséhez",
+      "categories": [
+        {
+          "category": "Nyitvatartás és időkezelés",
+          "color": "bg-blue-50 text-blue-600",
+          "rules": [
+            {
+              "name": "Heti nyitvatartás",
+              "description": "Minden napra külön nyitás, zárás és konyha zárás időpontja"
+            },
+            {
+              "name": "Speciális napok",
+              "description": "Ünnepnapok, zárva tartás, módosított nyitvatartás kezelése"
+            },
+            {
+              "name": "Ismétlődő szabályok",
+              "description": "Heti szinten ismétlődő speciális beállítások"
+            },
+            {
+              "name": "Zárási időszakok",
+              "description": "Napon belüli szünetek (pl. délutáni zárás 14-17)"
+            },
+            {
+              "name": "Foglalás időkorlátok",
+              "description": "Mennyivel előre kell foglalni (minimum: 2 óra, maximum: 30 nap)"
+            },
+            {
+              "name": "Időtartam szabályok",
+              "description": "Vendégszám alapú időtartamok (pl. 6+ fő → 3-5 óra választható)"
+            }
+          ]
+        },
+        {
+          "category": "Asztalkezelés és kapacitás",
+          "color": "bg-emerald-50 text-emerald-600",
+          "rules": [
+            {
+              "name": "Asztal kombinálás",
+              "description": "Kisebb asztalok automatikus összevonása nagyobb csoportoknak"
+            },
+            {
+              "name": "Túlterhelés szabályozás",
+              "description": "Max. túlméretezési arány (pl. 100% = dupla vendég engedhető)"
+            },
+            {
+              "name": "Területek kezelése",
+              "description": "Beltér, terasz, privát terem külön beállításokkal"
+            },
+            {
+              "name": "Maximális vendégszám",
+              "description": "Étterem szintű vendégszám limit beállítása"
+            },
+            {
+              "name": "Asztal definíciók",
+              "description": "Területenkénti asztalszámok és kapacitások"
+            }
+          ]
+        },
+        {
+          "category": "Foglalási szabályok",
+          "color": "bg-purple-50 text-purple-600",
+          "rules": [
+            {
+              "name": "Automatikus jóváhagyás",
+              "description": "Foglalások azonnali jóváhagyása vagy manuális ellenőrzés"
+            },
+            {
+              "name": "Napi foglalás tiltása",
+              "description": "Nyitás utáni napi foglalások letiltása (csak előzetes foglalás)"
+            },
+            {
+              "name": "Foglalás tiltása időszakonként",
+              "description": "Online foglalás letiltása speciális napokon (csak telefonos)"
+            },
+            {
+              "name": "Zárásig foglalhatóság",
+              "description": "Lehet-e foglalni zárási időpontig vagy csak X órával korábban"
+            },
+            {
+              "name": "Konyha zárás figyelmen kívül",
+              "description": "Foglalás engedélyezése konyha zárás után is (italfogyasztás)"
+            }
+          ]
+        },
+        {
+          "category": "Lemondás és módosítás",
+          "color": "bg-red-50 text-red-600",
+          "rules": [
+            {
+              "name": "Lemondás engedélyezése",
+              "description": "Vendégek lemondhatják-e a foglalást online"
+            },
+            {
+              "name": "Minimális lemondási idő",
+              "description": "Mennyivel a foglalás előtt mondható le (pl. 2 órával előtte)"
+            },
+            {
+              "name": "Lemondási email",
+              "description": "Automatikus email küldése lemondáskor"
+            },
+            {
+              "name": "Lemondási ok kötelező",
+              "description": "Vendégnek indokolnia kell-e a lemondást"
+            },
+            {
+              "name": "Egyedi üzenet",
+              "description": "Saját lemondási szabályzat szöveg megjelenítése"
+            }
+          ]
+        },
+        {
+          "category": "Email értesítések",
+          "color": "bg-amber-50 text-amber-600",
+          "rules": [
+            {
+              "name": "Foglalás visszaigazolás",
+              "description": "Email küldése a foglalás után azonnal"
+            },
+            {
+              "name": "Függőben email",
+              "description": "Email ha a foglalás jóváhagyásra vár"
+            },
+            {
+              "name": "Lemondási értesítés",
+              "description": "Email küldése amikor a foglalást lemondták"
+            },
+            {
+              "name": "Módosítási értesítés",
+              "description": "Email a foglalás adatainak változásakor"
+            },
+            {
+              "name": "Visszautasítási email",
+              "description": "Email amikor az étterem visszautasít egy foglalást"
+            },
+            {
+              "name": "Emlékeztető email",
+              "description": "Email a foglalás előtt X órával (pl. 24 óra)"
+            },
+            {
+              "name": "Visszajelzés kérés",
+              "description": "Email a foglalás után X órával (pl. 2-4 óra)"
+            },
+            {
+              "name": "Éttermi értesítők",
+              "description": "Email küldése az étteremnek minden új foglalásról"
+            }
+          ]
+        },
+        {
+          "category": "Időtartam beállítások",
+          "color": "bg-indigo-50 text-indigo-600",
+          "rules": [
+            {
+              "name": "Időslot hossza",
+              "description": "Foglalási slot hossza percben (pl. 15, 30 perc)"
+            },
+            {
+              "name": "Elérhető időtartamok",
+              "description": "Választható időtartamok (pl. 1, 1.5, 2, 2.5 óra)"
+            },
+            {
+              "name": "Vendégszám alapú időtartam",
+              "description": "Speciális napokon eltérő időtartamok létszám szerint"
+            }
+          ]
+        }
+      ]
+    },
+    "complexExample": {
+      "title": "Példa: Modern Étterem Teljes Beállításai",
+      "subtitle": "Így néz ki egy komplett éttermi szabályrendszer a gyakorlatban",
+      "sections": [
+        {
+          "title": "Nyitvatartás",
+          "color": "bg-blue-50 border-blue-200",
+          "items": [
+            "Hétfő-Csütörtök: 11:00-23:00 (konyha: 22:30)",
+            "Péntek-Szombat: 11:00-01:00 (konyha: 00:00)",
+            "Vasárnap: 12:00-22:00 (konyha: 21:30)",
+            "Minden kedd 14:30-16:00: Személyzeti értekezlet (zárva)"
+          ]
+        },
+        {
+          "title": "Foglalási szabályok",
+          "color": "bg-emerald-50 border-emerald-200",
+          "items": [
+            "Minimum 2 órával előre kell foglalni",
+            "Maximum 30 nappal előre lehet foglalni",
+            "Automatikus jóváhagyás: NEM (manuális ellenőrzés)",
+            "Napi foglalás nyitás után: TILTVA"
+          ]
+        },
+        {
+          "title": "Asztalkezelés",
+          "color": "bg-purple-50 border-purple-200",
+          "items": [
+            "Asztal kombinálás: ENGEDÉLYEZVE",
+            "Max. túlterhelés: 100% (4 fős asztal → max 8 fő)",
+            "Beltér: 12x 4 fős asztal",
+            "Terasz: 8x 4 fős asztal (szezonális)"
+          ]
+        },
+        {
+          "title": "Lemondási szabályok",
+          "color": "bg-red-50 border-red-200",
+          "items": [
+            "Online lemondás: ENGEDÉLYEZETT",
+            "Minimum lemondási idő: 2 óra",
+            "Lemondási ok: KÖTELEZŐ",
+            "Email értesítés: AUTOMATIKUS"
+          ]
+        },
+        {
+          "title": "Email értesítések",
+          "color": "bg-amber-50 border-amber-200",
+          "items": [
+            "Visszaigazolás: AZONNAL",
+            "Emlékeztető: 24 órával foglalás előtt",
+            "Visszajelzés kérés: 2 órával foglalás után",
+            "Éttermi értesítő: MINDEN foglalásról"
+          ]
+        },
+        {
+          "title": "Szilveszteri speciális szabály",
+          "color": "bg-pink-50 border-pink-200",
+          "items": [
+            "2025. dec. 31. - Speciális időtartamok:",
+            "1-4 fő: ONLINE FOGLALÁS TILTVA",
+            "5-6 fő: 3-4 óra választható",
+            "7+ fő: 4-6 óra választható"
+          ]
+        }
+      ],
+      "automation": {
+        "title": "Automatikus működés",
+        "description": "A rendszer az összes beállítást automatikusan alkalmazza. Minden foglalás a megfelelő szabályok szerint történik - nyitvatartás, kapacitás, időtartam, email értesítések. Nincs manuális munka!"
+      }
+    },
+    "benefits": {
+      "title": "Miért fontos a",
+      "titleHighlight": "részletes szabályozás?",
+      "items": [
+        {
+          "title": "Maximális kontroll",
+          "description": "Minden aspektusát kontrolálod a foglalási rendszernek. Pontosan úgy működik, ahogy te szeretnéd."
+        },
+        {
+          "title": "Automatizálás",
+          "description": "Egyszer beállítod, utána automatikusan működik. Nincs napi manuális teendő vagy beállítgatás."
+        },
+        {
+          "title": "Hibák elkerülése",
+          "description": "A rendszer nem engedi a szabályoknak nem megfelelő foglalásokat. Védelem a túlfoglalás ellen."
+        },
+        {
+          "title": "Jobb vendégélmény",
+          "description": "Vendégek pontosan látják a lehetőségeket. Nincs félreértés, nincs konfliktus."
+        },
+        {
+          "title": "Optimalizált bevétel",
+          "description": "Asztal kombinálás, túlterhelés, dinamikus időtartamok - minden a bevétel maximalizálásáért."
+        },
+        {
+          "title": "Automatikus kommunikáció",
+          "description": "Email értesítők, emlékeztetők, visszajelzés kérések - minden automatikusan megy."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Állítsd be az éttermed a saját igényeidre!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Kezdd el használni a komplett szabályrendszert még ma!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kérdésem van"
+    }
+  },
+  "qrKod": {
+    "metadata": {
+      "title": "QR-kódos Bejelentkezés | FoglaljOnline",
+      "description": "Villámgyors check-in QR-kóddal. Egyedi kód minden foglaláshoz, PDF letöltés, biztonságos azonosítás. Modern, papírmentes megoldás."
+    },
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "QR-kódos bejelentkezés"
+    },
+    "hero": {
+      "badge": "QR-kódos Check-in Rendszer",
+      "title": "Érkezett vendég?",
+      "titleHighlight": "Beolvasás, kész!",
+      "description": "Vendégeid egyedi QR-kódot kapnak foglaláskor. Érkezéskor egyetlen beolvasással azonnal ellenőrizhető minden információ – modern, gyors, papírmentes.",
+      "ctaPrimary": "Ingyenes próba",
+      "ctaSecondary": "Demó kérése"
+    },
+    "demo": {
+      "title": "Így működik a",
+      "titleHighlight": "QR-kódos rendszer",
+      "subtitle": "Kattints a lépésekre az interaktív bemutatóért",
+      "steps": [
+        {
+          "title": "Foglalás létrehozása",
+          "description": "Vendég online időpontot foglal",
+          "color": "from-blue-500 to-blue-600"
+        },
+        {
+          "title": "QR-kód generálása",
+          "description": "Rendszer automatikusan létrehozza az egyedi kódot",
+          "color": "from-emerald-500 to-emerald-600"
+        },
+        {
+          "title": "Letöltés",
+          "description": "Vendég letölti a PDF-et és QR-kódot",
+          "color": "from-purple-500 to-purple-600"
+        },
+        {
+          "title": "Check-in",
+          "description": "Beolvasás érkezéskor - kész!",
+          "color": "from-amber-500 to-amber-600"
+        }
+      ],
+      "details": [
+        {
+          "title": "Vendég foglal online",
+          "description": "Az online felületen kiválasztja az időpontot, megadja az adatait és lefoglalja az asztalt. A rendszer automatikusan dolgozik a háttérben."
+        },
+        {
+          "title": "Egyedi QR-kód generálása",
+          "description": "A rendszer azonnal létrehoz egy titkosított, egyedi QR-kódot a foglaláshoz. Ez a kód csak ehhez a foglaláshoz tartozik."
+        },
+        {
+          "title": "Letöltés egyszerűen",
+          "description": "A vendég a saját foglalási oldalán letöltheti a PDF visszaigazolást és a QR-kódot. Mindkettő tartalmazza a foglalás részleteit."
+        },
+        {
+          "title": "Villámgyors check-in",
+          "description": "Vendég érkezéskor megmutatja a QR-kódot. Bármely okoseszközzel beolvasva azonnal látod a vendég adatait, az asztalszámot és minden fontos információt."
+        }
+      ],
+      "files": {
+        "pdf": "foglalás.pdf",
+        "qr": "qr-kod.png"
+      }
+    },
+    "features": [
+      {
+        "title": "Villámgyors check-in",
+        "description": "Egyetlen beolvasással azonnal ellenőrizheted a foglalást. Nincs többé keresés névlistában.",
+        "color": "bg-blue-50 text-blue-600"
+      },
+      {
+        "title": "Bármilyen eszközzel",
+        "description": "Okostelefon, tablet vagy dedikált QR-olvasó - minden eszköz működik.",
+        "color": "bg-emerald-50 text-emerald-600"
+      },
+      {
+        "title": "Biztonságos azonosítás",
+        "description": "Egyedi QR-kód minden foglaláshoz. Csak a vendég férhet hozzá az adataihoz.",
+        "color": "bg-purple-50 text-purple-600"
+      },
+      {
+        "title": "PDF és QR letöltés",
+        "description": "Vendégeid letölthetik foglalásuk PDF-jét és QR-kódját egy kattintással.",
+        "color": "bg-amber-50 text-amber-600"
+      }
+    ],
+    "howItWorks": {
+      "title": "Hogyan működik a",
+      "titleHighlight": "QR-kódos check-in?",
+      "subtitle": "Három egyszerű lépés a tökéletes vendégélményhez",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Foglalás megerősítése",
+          "description": "Vendéged online időpontot foglal. A rendszer automatikusan generál egy egyedi QR-kódot."
+        },
+        {
+          "step": "2",
+          "title": "Letöltés és mentés",
+          "description": "A vendég letöltheti foglalását PDF-ben és a QR-kódot külön képként. Mindkettő tartalmazza a foglalás adatait."
+        },
+        {
+          "step": "3",
+          "title": "Gyors check-in",
+          "description": "Érkezéskor a vendég megmutatja a QR-kódot. Bármely okoseszközzel beolvasva azonnal látod a foglalás részleteit."
+        }
+      ]
+    },
+    "guestExperience": {
+      "title": "Vendégeid imádni fogják",
+      "description": "A foglalás után vendégeid saját foglalási oldalt kapnak, ahol minden információ elérhető. Modern, kényelmes, átlátható.",
+      "features": [
+        {
+          "title": "Foglalás státusza",
+          "desc": "Valós idejű információk a foglalásról"
+        },
+        {
+          "title": "PDF letöltés",
+          "desc": "Nyomtatható foglalási visszaigazolás"
+        },
+        {
+          "title": "QR-kód letöltés",
+          "desc": "Egyedi azonosító gyors check-inhez"
+        },
+        {
+          "title": "Minden elérhető",
+          "desc": "Telefonon, tableten, számítógépen"
+        }
+      ],
+      "example": {
+        "name": "Kovács Anna foglalása",
+        "date": "2025. jan. 15. 18:00"
+      }
+    },
+    "benefits": {
+      "title": "Miért használj",
+      "titleHighlight": "QR-kódos rendszert?",
+      "subtitle": "Modern technológia, amely egyszerűbbé és hatékonyabbá teszi a napi működést",
+      "items": [
+        {
+          "title": "Nincs papírmunka",
+          "description": "Elfelejthetted a nyomtatott foglalási listákat. Minden digitális, elérhető."
+        },
+        {
+          "title": "Gyorsabb kiszolgálás",
+          "description": "Csökkentsd a várakozási időt érkezéskor. Vendégeid értékelni fogják."
+        },
+        {
+          "title": "Kevesebb hiba",
+          "description": "Nincs elírás, nincs félreértés. A QR-kód pontosan azonosítja a foglalást."
+        },
+        {
+          "title": "Modern megjelenés",
+          "description": "Mutasd meg, hogy éttermeted a legújabb technológiát használja."
+        }
+      ]
+    },
+    "security": {
+      "title": "Biztonságos és",
+      "titleHighlight": "megbízható",
+      "subtitle": "Minden QR-kód egyedi és titkosított. Csak a foglalás tulajdonosa férhet hozzá az adatokhoz.",
+      "features": [
+        {
+          "title": "Adatvédelem",
+          "description": "Titkosított QR-kódok, védett vendégadatok, GDPR-kompatibilis rendszer."
+        },
+        {
+          "title": "Időmegtakarítás",
+          "description": "Másodpercek alatt ellenőrizhető foglalás. Nincs várakozás, nincs keresgélés."
+        }
+      ]
+    },
+    "useCases": {
+      "title": "Gyakorlati",
+      "titleHighlight": "használat",
+      "subtitle": "Így könnyíti meg a QR-kódos rendszer a mindennapokat",
+      "cases": [
+        {
+          "scenario": "Csúcsforgalom",
+          "description": "Este 7-kor egyszerre érkezik 10 vendég. QR-kóddal beolvasod őket másodpercek alatt, nincs torlódás a bejáratnál.",
+          "color": "bg-amber-50 text-amber-600"
+        },
+        {
+          "scenario": "Új dolgozó",
+          "description": "Új felszolgáló dolgozik? Nincs probléma. Megmutatod a QR-olvasót, már tudja is kezelni – nincs betanítási idő.",
+          "color": "bg-blue-50 text-blue-600"
+        },
+        {
+          "scenario": "Telefonos ellenőrzés",
+          "description": "Vendég telefonon kérdez? Beolvasod a QR-kódot amit emailben küldtél neki, azonnal látod a foglalás részleteit.",
+          "color": "bg-emerald-50 text-emerald-600"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Modernizáld a check-in folyamatot!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Kezdd el használni a QR-kódos rendszert még ma!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kérdésem van"
+    }
+  },
+
+  "dinamikusIdo": {
+    "metadata": {
+      "title": "Dinamikus Időszabályok | FoglaljOnline",
+      "description": "Automatikus foglalási időtartam beállítása vendégszám, nap és időpont alapján. Optimalizáld a bevételt intelligens időkezeléssel."
+    },
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Dinamikus időszabályok"
+    },
+    "hero": {
+      "badge": "Intelligens Időkezelés",
+      "title": "Az időtartam szabályozása",
+      "titleHighlight": "mostantól automatikus",
+      "description": "Állítsd be egyszer a foglalási időtartamokat vendégszám, nap és időpont alapján. A rendszer automatikusan alkalmazni fogja őket – minden egyes foglalásnál.",
+      "ctaPrimary": "Ingyenes próba",
+      "ctaSecondary": "Demó kérése"
+    },
+    "demo": {
+      "title": "Szabályok működés",
+      "titleHighlight": "közben",
+      "subtitle": "Kattints a szabályokra és látsd, hogyan változik az elérhető időtartam",
+      "rules": [
+        {
+          "id": "default",
+          "name": "Alapértelmezett",
+          "guests": "Minden vendégszám",
+          "days": "Minden nap",
+          "hours": "Egész nap",
+          "durations": ["1 óra", "1.5 óra", "2 óra", "2.5 óra"],
+          "color": "from-gray-500 to-gray-600"
+        },
+        {
+          "id": "weekend",
+          "name": "Hétvége",
+          "guests": "Minden vendégszám",
+          "days": "Szombat-Vasárnap",
+          "hours": "Egész nap",
+          "durations": ["1.5 óra", "2 óra", "2.5 óra", "3 óra"],
+          "color": "from-blue-500 to-blue-600"
+        },
+        {
+          "id": "large-group",
+          "name": "Nagycsoportok",
+          "guests": "6+ fő",
+          "days": "Péntek-Szombat",
+          "hours": "17:00-23:00",
+          "durations": ["2 óra", "2.5 óra", "3 óra", "4 óra", "5 óra"],
+          "color": "from-purple-500 to-purple-600"
+        },
+        {
+          "id": "peak-hours",
+          "name": "Csúcsidő - kis csoportok",
+          "guests": "1-4 fő",
+          "days": "Péntek-Szombat",
+          "hours": "18:00-21:00",
+          "durations": ["1 óra", "1.5 óra"],
+          "color": "from-amber-500 to-amber-600"
+        }
+      ],
+      "labels": {
+        "guests": "Vendégszám",
+        "days": "Napok",
+        "hours": "Időszak"
+      },
+      "durationsLabel": "ELÉRHETŐ FOGLALÁSI IDŐTARTAMOK",
+      "explanation": "Így működik: Amikor egy vendég foglalni szeretne és a feltételek megfelelnek ennek a szabálynak, automatikusan ezek az időtartamok jelennek meg választási lehetőségként."
+    },
+    "features": [
+      {
+        "title": "Vendégszám alapú szabályok",
+        "description": "Különböző időtartamok 2 főtől 10+ fős csoportokig. Te döntöd el a limiteket.",
+        "color": "bg-blue-50 text-blue-600"
+      },
+      {
+        "title": "Napok és időszakok",
+        "description": "Eltérő szabályok hétköznapokra, hétvégékre vagy akár óránkénti bontásban.",
+        "color": "bg-emerald-50 text-emerald-600"
+      },
+      {
+        "title": "Rugalmas időtartamok",
+        "description": "1 órától 6+ óráig, félórás bontásban. Teljesen testreszabható.",
+        "color": "bg-purple-50 text-purple-600"
+      },
+      {
+        "title": "Automatikus alkalmazás",
+        "description": "Beállítod egyszer, utána a rendszer automatikusan dolgozik. Nincs kézi munka.",
+        "color": "bg-amber-50 text-amber-600"
+      }
+    ],
+    "howItWorks": {
+      "title": "Hogyan működnek a",
+      "titleHighlight": "dinamikus szabályok?",
+      "subtitle": "Három rétegű szabályrendszer a maximális rugalmasságért",
+      "steps": [
+        {
+          "step": "1",
+          "title": "Vendégszám beállítása",
+          "description": "Meghatározod a létszám kategóriákat: 2 fő, 3-4 fő, 5-6 fő, 7-10 fő, 10+ fő. Minden kategóriához más időtartam.",
+          "example": "4 fő alatt: 1-2 óra"
+        },
+        {
+          "step": "2",
+          "title": "Napok kiválasztása",
+          "description": "Megadod, mely napokon érvényes a szabály. Hétköznapok, hétvégék vagy konkrét napok (pl. péntek-szombat).",
+          "example": "Péntek-szombat: speciális"
+        },
+        {
+          "step": "3",
+          "title": "Időszakok megadása",
+          "description": "Opcionálisan beállíthatod, mely órákban legyen aktív. Például csak 18:00 után vagy egész nap.",
+          "example": "18:00-23:00: rövid idő"
+        }
+      ]
+    },
+    "useCases": {
+      "title": "Valós",
+      "titleHighlight": "felhasználási módok",
+      "subtitle": "Így optimalizálhatod a működésed dinamikus időszabályokkal",
+      "exampleLabel": "PÉLDA SZABÁLY",
+      "cases": [
+        {
+          "title": "Csúcsidő menedzsment",
+          "description": "Péntek-szombat este nagy a forgalom? Korlátozd a kisebb csoportok foglalási idejét 1.5 órára, de adj 3-4 órát a nagyobb társaságoknak, akik többet költenek.",
+          "example": "4 fő alatt → 1-1.5 óra | 5+ fő → 2-4 óra",
+          "color": "bg-amber-50 text-amber-600"
+        },
+        {
+          "title": "Nagycsoportok kezelése",
+          "description": "8+ fős csoportok gyakran hosszabb időt töltenek nálad? Automatikusan adj nekik 4-6 órás időablakot, hogy kényelmesen étkezzenek.",
+          "example": "8+ fő → 3-6 óra automatikusan",
+          "color": "bg-blue-50 text-blue-600"
+        },
+        {
+          "title": "Délutáni vs. esti foglalások",
+          "description": "Délután 18:00 előtt hosszabb időtartamokat engedhetsz, míg este 18:00 után, csúcsidőben rövidebb időszakokat állíthatsz be.",
+          "example": "18:00 előtt → 2-4 óra | 18:00 után → 1-2 óra",
+          "color": "bg-purple-50 text-purple-600"
+        },
+        {
+          "title": "Hétvégi eltérések",
+          "description": "Hétvégén más tempó van? Szombat-vasárnap adj több időt minden vendégszám kategóriának, mint hétköznap.",
+          "example": "Hétköznap: 2 óra max | Hétvégén: 3-4 óra max",
+          "color": "bg-emerald-50 text-emerald-600"
+        }
+      ]
+    },
+    "complexExample": {
+      "title": "Komplex példa:",
+      "titleHighlight": "Péntek esti csúcsforgalom",
+      "subtitle": "Látod, hogy működnek együtt a szabályok egy valós esetben",
+      "situation": {
+        "title": "Helyzet",
+        "description": "Pénteken és szombaton este hatalmas a forgalom. Sok az asztal, de még több a foglalás. Optimalizálni szeretnéd a forgalmat."
+      },
+      "rules": [
+        {
+          "title": "Alapértelmezett szabály (hétköznap)",
+          "description": "Minden vendégszám: 1, 1.5, 2, 2.5 óra választható"
+        },
+        {
+          "title": "Új szabály: Péntek-szombat 18:00-23:00, 1-5 fő",
+          "description": "Csak 1, 1.5 óra választható (gyors forgás)"
+        },
+        {
+          "title": "Új szabály: Péntek-szombat 18:00-23:00, 6+ fő",
+          "description": "2, 2.5, 3, 4 óra választható (nagyobb költés, több idő)"
+        }
+      ],
+      "result": {
+        "title": "Eredmény",
+        "description": "Kis csoportok gyorsan fogynak (több forgás), nagy csoportok kényelmesen étkezhetnek és többet költenek. Csúcsidőben 30-40% több asztalt tudsz kiszolgálni, miközben a nagyobb csoportok elégedettek maradnak."
+      }
+    },
+    "benefits": {
+      "title": "Miért használj",
+      "titleHighlight": "dinamikus szabályokat?",
+      "subtitle": "Üzleti előnyök, amelyek számítanak",
+      "items": [
+        {
+          "title": "Maximalizált bevétel",
+          "description": "Csúcsidőben gyorsabb asztalforgás, csendesebb időszakokban hosszabb vendégidő. Optimális kihasználtság."
+        },
+        {
+          "title": "Elégedettebb vendégek",
+          "description": "Nagyobb csoportok kapnak elég időt, nem érzik magukat siettetésnek. Pozitív élmény garantált."
+        },
+        {
+          "title": "Kevesebb konfliktus",
+          "description": "Automatikus szabályok jelentik, hogy nem kell manuálisan időzítened. Nincs emberi hiba vagy elfelejtett módosítás."
+        },
+        {
+          "title": "Rugalmas működés",
+          "description": "Bármikor átállítható a stratégia. Szezonálisan, eseményekhez vagy akár óránként változtathatsz."
+        }
+      ]
+    },
+    "settings": {
+      "title": "Teljes szabadság a beállításokban",
+      "subtitle": "Te szabod meg pontosan, hogyan működjön az éttermed",
+      "sections": [
+        {
+          "title": "Vendégszám kategóriák",
+          "items": [
+            "1-2 fő",
+            "3-4 fő",
+            "5-6 fő",
+            "7-10 fő",
+            "10+ fő",
+            "Egyedi tartományok"
+          ]
+        },
+        {
+          "title": "Napok kiválasztása",
+          "items": [
+            "Hétköznapok",
+            "Hétvégék",
+            "Konkrét napok",
+            "Ünnepnapok",
+            "Egyedi dátumok",
+            "Dátumtartományok"
+          ]
+        },
+        {
+          "title": "Időtartam opciók",
+          "items": [
+            "30 perces lépések",
+            "1-6 óra között",
+            "Több tartomány",
+            "Minimum/maximum",
+            "Alapértelmezett érték",
+            "Tiltott értékek"
+          ]
+        },
+        {
+          "title": "Időszakok",
+          "items": [
+            "Egész napos",
+            "Reggeli (6:00-11:00)",
+            "Ebéd (11:00-15:00)",
+            "Vacsora (17:00-23:00)",
+            "Egyedi órák",
+            "Több időszak"
+          ]
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Kezdd el optimalizálni a foglalásokat!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Állítsd be a dinamikus szabályokat percek alatt!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kérdésem van"
+    }
+  },
+
+  "ertesitesek": {
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Böngésző Értesítések"
+    },
+
+    "metadata": {
+      "title": "Böngésző Értesítések | FoglaljOnline",
+      "description": "Valós idejű push értesítések minden eszközön. Ne maradj le egyetlen foglalásról sem, azonnal értesülj minden változásról."
+    },
+
+    "backButton": "Vissza a funkciókhoz",
+    "hero": {
+      "badge": "Valós idejű Push Értesítések",
+      "title": "Ne maradj le egyetlen",
+      "titleHighlight": "foglalásról sem",
+      "description": "Nem kell folyamatosan frissítened az oldalt. A rendszer azonnal szól, ha történt valami – akár asztali gépen, akár mobilon vagy.",
+      "cta": "Értesítések bekapcsolása",
+      "subtitle": "Egyetlen kattintással élesíthető"
+    },
+    "demo": {
+      "title": "Értesítés minden eszközön,",
+      "titleHighlight": "azonnal.",
+      "description": "A rendszer intelligensen alkalmazkodik az eszközödhöz. Asztali gépen diszkrét saroküzenetet kapsz, mobilon pedig a megszokott push értesítés jelenik meg a képernyő tetején.",
+      "steps": [
+        "Azonnal felugrik, hangjelzéssel",
+        "Kattintásra megnyitja a konkrét foglalást",
+        "Működik lezárt képernyőn is"
+      ]
+    },
+    "notification": {
+      "time": "Most",
+      "initials": "KP",
+      "title": "🎉 Új foglalás érkezett! 🎉",
+      "guestName": "Kovács Péter",
+      "message": "asztalt foglalt a(z) Gurmé étteremben. 🍽️"
+    },
+    "accessibility": {
+      "title": "Mindenki számára elérhető",
+      "description": "Nincs bonyolult telepítés vagy applikáció letöltés. A rendszer a böngésződben fut, és egyetlen gombnyomással engedélyezheted az értesítéseket.",
+      "devices": ["Asztali gép", "Mobil", "Tablet"]
+    },
+    "finalCta": {
+      "title": "Légy mindig naprakész",
+      "description": "Próbáld ki a rendszert, és tapasztald meg, milyen érzés, amikor az étterem \"szól neked\", ha teendő van.",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kapcsolatfelvétel"
+    }
+  },
+
+  "automatikusEmailek": {
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Automatikus Emlékeztetők"
+    },
+    "hero": {
+      "badge": "Automatikus Email Emlékeztetők",
+      "title": "Csökkentsd a no-show-t",
+      "titleHighlight": "70%-kal",
+      "description": "Automata email értesítések 4 nyelven, professzionális sablonokkal és részletes követéssel. Vendégeid nem felejtenek el többé!",
+      "stats": [
+        { "value": "70%", "label": "no-show csökkenés" },
+        { "value": "4", "label": "nyelv támogatva" },
+        { "value": "99%", "label": "kézbesítési arány" }
+      ]
+    },
+    "emailTypes": {
+      "title": "6 típusú",
+      "titleHighlight": "automatikus email",
+      "subtitle": "Minden lépésnél informáld vendégeidet professzionálisan",
+      "types": [
+        {
+          "title": "Foglalás visszaigazolás",
+          "description": "Automatikus email küldése a foglalás után azonnal",
+          "color": "bg-emerald-50 text-emerald-600",
+          "timing": "Azonnal"
+        },
+        {
+          "title": "Foglalás előtti emlékeztető",
+          "description": "Emlékeztető a foglalás előtt 24 órával",
+          "color": "bg-blue-50 text-blue-600",
+          "timing": "24 óra előtt"
+        },
+        {
+          "title": "Lemondási értesítés",
+          "description": "Email küldése amikor a foglalást lemondták",
+          "color": "bg-red-50 text-red-600",
+          "timing": "Lemondáskor"
+        },
+        {
+          "title": "Módosítási értesítés",
+          "description": "Értesítés a foglalás adatainak változásakor",
+          "color": "bg-amber-50 text-amber-600",
+          "timing": "Módosításkor"
+        },
+        {
+          "title": "Visszautasítási értesítés",
+          "description": "Küldés amikor az étterem visszautasít egy foglalást",
+          "color": "bg-purple-50 text-purple-600",
+          "timing": "Visszautasításkor"
+        },
+        {
+          "title": "Visszajelzés kérés",
+          "description": "Email a foglalás után 2-4 órával",
+          "color": "bg-pink-50 text-pink-600",
+          "timing": "2-4 óra után"
+        }
+      ]
+    },
+    "multilingual": {
+      "title": "4 nyelven",
+      "titleHighlight": "automatikusan",
+      "subtitle": "Az emailek automatikusan a vendég nyelvén érkeznek meg",
+      "languages": [
+        { "code": "HU", "name": "Magyar", "flag": "🇭🇺" },
+        { "code": "EN", "name": "English", "flag": "🇬🇧" },
+        { "code": "DE", "name": "Deutsch", "flag": "🇩🇪" },
+        { "code": "ES", "name": "Español", "flag": "🇪🇸" }
+      ],
+      "howItWorks": {
+        "title": "Hogyan működik a nyelv kiválasztás?",
+        "points": [
+          "Böngésző nyelve alapján automatikus kiválasztás",
+          "Vendég választhat a foglalási űrlapon",
+          "Minden sablon elérhető mind a 4 nyelven",
+          "Te szerkesztheted a fordításokat"
+        ]
+      }
+    },
+    "editor": {
+      "title": "Professzionális sablonok és",
+      "titleHighlight": "szerkesztő",
+      "description": "Használd az előre elkészített, gyönyörű email sablonokat, vagy szabd testre a saját arculatodnak megfelelően.",
+      "imageAlt": "Email szerkesztő előnézet",
+      "features": [
+        "Előre készített profi sablonok",
+        "Vizuális email szerkesztő",
+        "Mind a 4 nyelvhez külön sablon",
+        "Automatikus linkek (lemondás, QR kód)"
+      ]
+    },
+    "tracking": {
+      "title": "Email",
+      "titleHighlight": "követés és statisztika",
+      "subtitle": "Lásd pontosan, hogy az emailek megérkeztek-e és megnyitották-e őket",
+      "stats": [
+        {
+          "title": "Kézbesítve",
+          "value": "98.7%",
+          "color": "text-emerald-600",
+          "bg": "bg-emerald-50"
+        },
+        {
+          "title": "Megnyitva",
+          "value": "76.3%",
+          "color": "text-blue-600",
+          "bg": "bg-blue-50"
+        },
+        {
+          "title": "Kattintva",
+          "value": "45.1%",
+          "color": "text-purple-600",
+          "bg": "bg-purple-50"
+        }
+      ],
+      "features": {
+        "title": "Mit követhetsz nyomon?",
+        "items": [
+          "Sikeresen kézbesített emailek",
+          "Megnyitási arány vendégenként",
+          "Link kattintások (lemondás, QR)",
+          "Visszapattant (bounce) emailek",
+          "Kézbesítési idő",
+          "Nyelv szerinti statisztika"
+        ]
+      }
+    },
+    "finalCta": {
+      "title": "Kezdd el most és csökkentsd a no-show-t!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Az első automatikus emailt ma elküldheted!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kapcsolatfelvétel"
+    }
+  },
+
+  "analitika": {
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Üzleti Analitika"
+    },
+    "backButton": "Vissza a funkciókhoz",
+    "hero": {
+      "badge": "Valós idejű Üzleti Analitika",
+      "title": "Hozd ki a maximumot az éttermedből",
+      "titleHighlight": "az adatok erejével",
+      "description": "Felejtsd el a megérzéseket. Dönts tények alapján! Részletes jelentések a csúcsidőszakokról, vendégszámokról és a bevételekről egyetlen áttekinthető műszerfalon.",
+      "cta": "Kapcsolat"
+    },
+    "screenshot": {
+      "alt": "Analitika Dashboard"
+    },
+    "features": {
+      "title": "Mire ad választ az analitika?",
+      "subtitle": "A rendszer automatikusan feldolgozza a foglalási adatokat, és közérthető válaszokat ad a legfontosabb üzleti kérdéseidre.",
+      "cards": [
+        {
+          "title": "Mikor van a csúcsidő?",
+          "description": "Lásd napra és órára lebontva a terheltséget, hogy tudd, mikor kell több személyzet.",
+          "example": "Pl: \"Csúcsidő: Vasárnap 17:00\"",
+          "badgeColor": "bg-gray-50 text-gray-600 border border-gray-100"
+        },
+        {
+          "title": "Teljesítmény mérés",
+          "description": "Hasonlítsd össze az e heti teljesítményt az előző időszakokkal.",
+          "example": "Növekedés: +12% vs. múlt hét",
+          "badgeColor": "bg-emerald-50 text-emerald-700 border border-emerald-100"
+        },
+        {
+          "title": "Átlagos tartózkodás",
+          "description": "Mennyi ideig maradnak a vendégek átlagosan? Optimalizáld az asztalforgást.",
+          "example": "Pl: \"2.1 óra / asztal\"",
+          "badgeColor": "bg-gray-50 text-gray-600 border border-gray-100"
+        },
+        {
+          "title": "Vendég összetétel",
+          "description": "Hány fős asztalokat foglalnak leggyakrabban? (2, 4 vagy 6 fő?)",
+          "example": "Pl: \"Átlag 4.2 fő\"",
+          "badgeColor": "bg-gray-50 text-gray-600 border border-gray-100"
+        }
+      ]
+    },
+    "optimization": {
+      "title": "Optimalizálj a számok alapján",
+      "description": "Nem kell adatkutatónak lenned. A rendszer automatikusan grafikonokká alakítja a bonyolult adatokat, így egy pillantás alatt láthatod a trendeket.",
+      "points": [
+        {
+          "title": "Személyzet optimalizálás",
+          "description": "Lásd előre, mikorra kell több felszolgálót beosztanod."
+        },
+        {
+          "title": "Marketing mérés",
+          "description": "Kövesd nyomon, melyik kampány hozott több vendéget."
+        }
+      ]
+    },
+    "charts": {
+      "revenue": {
+        "label": "Bevétel",
+        "growth": "+12%",
+        "days": ["H", "K", "Sze", "Cs", "P", "Szo", "V"]
+      },
+      "visitors": {
+        "label": "Vendégek",
+        "total": "842",
+        "unit": "fő/hét"
+      },
+      "kpis": [
+        {
+          "label": "Foglalások",
+          "value": "214",
+          "highlight": false
+        },
+        {
+          "label": "Átlag/Asztal",
+          "value": "18e Ft",
+          "highlight": false
+        },
+        {
+          "label": "Új vendég",
+          "value": "32%",
+          "highlight": true
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Vedd kezedbe az irányítást",
+      "description": "Lásd át az éttermed működését úgy, mint még soha. Az adatok nem hazudnak – növeld a profitod az analitika segítségével.",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kapcsolatfelvétel"
+    }
+  },
+
+  "vendegkezeles": {
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Vendégkezelés"
+    },
+    "backButton": "Vissza a funkciókhoz",
+    "hero": {
+      "badge": "Beépített CRM Rendszer",
+      "title": "Ismerd meg a vendégeidet,",
+      "titleHighlight": "mielőtt belépnek az ajtón",
+      "description": "Azonosítsd a törzsvendégeket és szűrd ki a problémás foglalókat egy pillanat alatt. Adatvezérelt vendégkezelés a maximális bevételért.",
+      "cta": "Kipróbálom ingyen"
+    },
+    "warningSystem": {
+      "title": "Intelligens figyelmeztető rendszer",
+      "description": "Ne érjenek kellemetlen meglepetések. A rendszer automatikusan piros jelzéssel és ikonnal emeli ki azokat a vendégeket, akiknél korábban probléma merült fel.",
+      "imageAlt": "Lista nézet - piros felkiáltójel és háttér",
+      "alertBadge": "Rendszerüzenet",
+      "alertText": "Problémás vendég!",
+      "features": [
+        {
+          "title": "No-show szűrés",
+          "description": "Azonnal látod, ha valakinek magas a \"Nem jelent meg\" aránya, még mielőtt asztalt adnál neki."
+        },
+        {
+          "title": "Előélet vizsgálat",
+          "description": "A figyelmeztetés már a foglalási listában megjelenik, így a személyzet azonnal tudja, kire kell figyelni."
+        }
+      ]
+    },
+    "detailedProfile": {
+      "title": "360 fokos vendégprofil:",
+      "titleHighlight": "Minden adat egy helyen",
+      "description": "Kattints bármelyik vendég nevére a részletes adatlapért. A rendszer automatikusan gyűjti és elemzi a vendégek szokásait.",
+      "imageAlt": "Részletes profil - nagy modális ablak statisztikákkal és grafikonokkal",
+      "cards": [
+        {
+          "title": "Elfogadási arány",
+          "description": "Lásd százalékosan, mennyire megbízható a vendég."
+        },
+        {
+          "title": "Lemondási okok",
+          "description": "Kövesd nyomon, miért mondta le a foglalást."
+        }
+      ],
+      "features": [
+        "Összes foglalás és vendégszám statisztika",
+        "Kedvenc terület (pl. Terasz) rögzítése",
+        "Utolsó látogatás ideje és gyakorisága",
+        "Manuális jegyzetek a személyzetnek"
+      ]
+    },
+    "blogTeaser": {
+      "title": "Miért fontos a vendégadatok gyűjtése?",
+      "description": "Tudtad, hogy a no-show arány akár 30%-kal csökkenthető, ha ismered a vendégeid előéletét? A rendszerünk segít, hogy adatok alapján hozhass döntéseket érzelmek helyett.",
+      "buttonText": "Blogbejegyzés hamarosan..."
+    },
+    "finalCta": {
+      "title": "Kezdd el építeni a vendégadatbázisod még ma",
+      "description": "Ne hagyd, hogy az értékes információk elvesszenek. Próbáld ki a rendszert kötelezettségek nélkül, és védd meg a bevételed.",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kapcsolatfelvétel"
+    }
+  },
+
+  "asztalterkep": {
+    "breadcrumbs": {
+      "home": "Főoldal",
+      "features": "Funkciók",
+      "current": "Asztaltérkép"
+    },
+    "hero": {
+      "badge": "Asztaltérkép & Foglaláskezelés",
+      "title": "Modern foglaláskezelés",
+      "titleHighlight": "minden eszközön",
+      "description": "Átlátható nézetek, gyors exportálás, részletes vendéginformációk - kezeld foglalásaidat bárhonnan, bármikor.",
+      "ctaPrimary": "Ingyenes próba",
+      "ctaSecondary": "Demó kérése"
+    },
+    "demo": {
+      "title": "Asztaltérkép - Beltér",
+      "subtitle": "Ma",
+      "liveUpdate": "Élő frissítés",
+      "scrollHint": "Görgess vízszintesen",
+      "legend": {
+        "confirmed": "Megerősítve",
+        "pending": "Függőben",
+        "arrived": "Megérkezett"
+      },
+      "notifications": {
+        "newBooking": "Új foglalás",
+        "checkIn": "Check-in"
+      }
+    },
+    "features": [
+      {
+        "title": "Modern nézetek",
+        "description": "Lista és táblázat nézet között váltva könnyen áttekintheted a foglalásokat.",
+        "color": "bg-blue-50 text-blue-600"
+      },
+      {
+        "title": "Napi exportálás",
+        "description": "Exportáld a napi foglalásokat Excel vagy CSV formátumban egy kattintással.",
+        "color": "bg-emerald-50 text-emerald-600"
+      },
+      {
+        "title": "Minden eszközre",
+        "description": "Tökéletesen működik számítógépen, tableten és mobiltelefonon is.",
+        "color": "bg-purple-50 text-purple-600"
+      },
+      {
+        "title": "Részletes információk",
+        "description": "Vendég neve, telefonszám, email, vendégszám, terület, időpont - minden egy helyen.",
+        "color": "bg-amber-50 text-amber-600"
+      }
+    ],
+    "bookingInfo": {
+      "title": "Minden információ",
+      "titleHighlight": "egy pillantásra",
+      "subtitle": "Részletes foglalási adatok, amelyeket valóban használni fogsz",
+      "items": [
+        {
+          "label": "Vendég neve és száma",
+          "value": "Kovács Anna (4 fő)"
+        },
+        {
+          "label": "Foglalás időpontja",
+          "value": "2025. jan. 15. - 18:00"
+        },
+        {
+          "label": "Terület és asztal",
+          "value": "Beltér - 5-ös asztal"
+        },
+        {
+          "label": "Foglalás időtartama",
+          "value": "2.5 óra"
+        }
+      ]
+    },
+    "export": {
+      "title": "Napi exportálás egyszerűen",
+      "description": "Exportáld a napi foglalásokat PDF formátumban. Ideális könyveléshez, statisztikákhoz vagy nyomtatáshoz.",
+      "features": [
+        "PDF formátum",
+        "Részletgazdag mezők",
+        "Dátum szerinti szűrés",
+        "Egyetlen kattintás"
+      ]
+    },
+    "responsive": {
+      "title": "Tökéletes minden",
+      "titleHighlight": "eszközön",
+      "subtitle": "Reszponzív design, amely automatikusan alkalmazkodik a képernyő méretéhez. Számítógép, tablet, telefon - mindenhol tökéletes.",
+      "devices": [
+        {
+          "icon": "",
+          "title": "Számítógép",
+          "desc": "Teljes funkciókészlet nagy képernyőn"
+        },
+        {
+          "icon": "",
+          "title": "Tablet",
+          "desc": "Optimalizált elrendezés tabletekre"
+        },
+        {
+          "icon": "",
+          "title": "Mobil",
+          "desc": "Érintésre optimalizált kezelés"
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Próbáld ki most ingyen!",
+      "description": "30 napos ingyenes próbaidőszak, bankkártya nélkül. Kezdd el használni az asztaltérképet még ma!",
+      "ctaPrimary": "Ingyenes próba indítása",
+      "ctaSecondary": "Kérdésem van"
+    }
+  }
+}

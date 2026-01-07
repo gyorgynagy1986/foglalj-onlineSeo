@@ -14,20 +14,29 @@
       "description": "Az online foglalási rendszer magyar éttermek számára. Automatizálja üzletét és növelje bevételeit."
     },
     "sections": {
-      "product": {
-        "title": "Termék",
+      "features": {
+        "title": "Funkciók",
         "links": [
           {
-            "text": "Összes funkció",
-            "href": "https://www.bukio.hu/osszes-asztalfoglalas-funkcio"
+            "text": "Funkciók",
+            "href": "/#features"
           },
           {
-            "text": "Árazás",
-            "href": "#pricing"
+            "text": "Árak",
+            "href": "/#pricing"
           },
           {
-            "text": "Űrlap típusok",
+            "text": "Foglalási űrlapok",
             "href": "#booking-forms"
+          }
+        ]
+      },
+      "resources": {
+        "title": "Tudástár",
+        "links": [
+          {
+            "text": "Blog",
+            "href": "/blog"
           }
         ]
       },
@@ -36,11 +45,11 @@
         "links": [
           {
             "text": "Kapcsolat",
-            "href": "#contact"
+            "href": "/#contact"
           },
           {
-            "text": "GYIK",
-            "href": "#faq"
+            "text": "Gyakori kérdések",
+            "href": "/#faq"
           },
           {
             "text": "hello@foglaljonline.hu",
@@ -49,11 +58,11 @@
         ]
       },
       "legal": {
-        "title": "Jogi",
+        "title": "Jogi információk",
         "links": [
           {
-            "text": "Adatkezelés",
-            "href": "/adatkezeles"
+            "text": "Adatkezelési tájékoztató",
+            "href": "/privacy"
           }
         ]
       }
@@ -160,7 +169,7 @@
       },
       {
         "question": "Milyen támogatást kapok?",
-        "answer": "Magyar nyelvű email és telefonos támogatás érhető el. Emellett részletes dokumentációt és videó oktatóanyagokat biztosítunk. Prémium ügyfeleknek dedikált account manager is jár."
+        "answer": "Magyar és Angol nyelvű email és telefonos támogatás érhető el. Emellett részletes dokumentációt és videó oktatóanyagokat biztosítunk. Prémium ügyfeleknek dedikált account manager is jár."
       },
       {
         "question": "Lehet-e importálni meglévő adatokat?",
@@ -319,6 +328,28 @@
     }
   },
 
+  "support": {
+    "badge": "Prémium Támogatás",
+    "title": "Nem hagyunk magadra:",
+    "titleHighlight": "folyamatos felügyelet",
+    "description": "Tudjuk, hogy a vendéglátásban nincs megállás. Rendszerünket úgy terveztük, hogy stabil hátteret biztosítson, de ha mégis kérdésed van, csapatunk rendelkezésedre áll.",
+    "features": {
+      "support": {
+        "title": "Hétfőtől Vasárnapig elérhetőek vagyunk",
+        "description": "Legyen szó technikai kérdésről vagy beállítási segítségről, ügyfélszolgálatunk a hét minden napján segít megoldani a felmerülő problémákat."
+      },
+      "monitoring": {
+        "title": "Proaktív rendszerfelügyelet",
+        "description": "Nem várjuk meg, amíg szólsz. Automatizált rendszereink a nap 24 órájában figyelik a szolgáltatás állapotát, és azonnal beavatkoznak hiba esetén."
+      },
+      "security": {
+        "title": "Adatbiztonság és mentés",
+        "description": "A foglalási adataid biztonságban vannak. Rendszeres biztonsági mentéseket készítünk és titkosított csatornákon kommunikálunk."
+      }
+    },
+    "cta": "Vedd fel velünk a kapcsolatot"
+  },
+
   "bookingManagement": {
     "badge": "Foglaláskezelés",
     "title": "Kezelje foglalásait",
@@ -358,40 +389,49 @@
     "learnMore": "Részletek",
     "features": [
       {
-        "title": "Intelligens foglalási rendszer",
-        "description": "Automatizált asztalkezelés, területek kezelése és valós idejű kapacitás optimalizálás."
+        "title": "Asztaltérkép",
+        "description": "Átlátható asztal és vendégkezelés, valós idejű adatok és egy kattintásos napi foglalások exportálása PDF-ben.",
+        "link": "/funkciok/asztalterkep"
       },
       {
         "title": "Professzionális vendégkezelés",
-        "description": "Részletes vendégprofilok, foglalási előzmények és személyre szabott szolgáltatások."
+        "description": "Részletes vendégprofilok, foglalási előzmények és személyre szabott szolgáltatások.",
+        "link": "/funkciok/vendegkezeles"
       },
       {
         "title": "Üzleti analitika",
-        "description": "Részletes jelentések, bevétel elemzés és teljesítmény mutatók valós időben."
+        "description": "Részletes jelentések, bevétel elemzés és teljesítmény mutatók valós időben.",
+        "link": "/funkciok/uzleti-jelentesek"
       },
       {
         "title": "Email automatizálás",
-        "description": "Automatikus emlékeztetők, megerősítések és visszajelzés kérések."
+        "description": "Automatikus emlékeztetők, megerősítések és visszajelzés kérések.",
+        "link": "/funkciok/automatikus-emlekeztetok"
       },
       {
         "title": "Böngésző értesítések",
-        "description": "Push értesítések új foglalásokról, módosításokról és lemondásokról valós időben."
+        "description": "Push értesítések új foglalásokról, módosításokról és lemondásokról valós időben.",
+        "link": "/funkciok/bongeszo-ertesitesek"
       },
       {
         "title": "QR-kódos bejelentkezés",
-        "description": "Vendégei egyedi QR-kódot kapnak – érkezéskor egyetlen beolvasással ellenőrizhető."
+        "description": "Vendégei egyedi QR-kódot kapnak – érkezéskor egyetlen beolvasással ellenőrizhető.",
+        "link": "/funkciok/qr-kod-bejelentkezes"
       },
       {
         "title": "Dinamikus időszabályok",
-        "description": "Automatikusan állítsa be a foglalás időtartamát a vendégszám alapján."
+        "description": "Automatikusan állítsa be a foglalás időtartamát a vendégszám alapján.",
+        "link": "/funkciok/dinamikus-idoszabalyok"
       },
       {
         "title": "Testreszabható szabályok",
-        "description": "Rugalmas nyitvatartás, speciális napok és egyedi foglalási feltételek."
+        "description": "Rugalmas nyitvatartás, speciális napok és egyedi foglalási feltételek.",
+        "link": "/funkciok/testreszabhato-szabalyok"
       },
       {
         "title": "Mobilbarát felület",
-        "description": "Reszponzív design minden eszközön – vendégei bárhonnan foglalhatnak."
+        "description": "Reszponzív design minden eszközön – vendégei bárhonnan foglalhatnak.",
+        "link": "/funkciok/mobilbarat-felulet"
       }
     ],
     "bottomCta": {

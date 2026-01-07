@@ -4,6 +4,8 @@ import { DM_Sans, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -160,6 +162,8 @@ export default async function RootLayout(props: RootLayoutProps) {
 
   const { lang = "hu" } = params;
 
+  const dict = await getDictionary(lang);
+
   return (
     <html
       lang={lang}
@@ -172,8 +176,11 @@ export default async function RootLayout(props: RootLayoutProps) {
         />
       </head>
       <body className={`font-sans antialiased`}>
+        <Navbar dict={dict.navbar} lang={lang} />
+
         {children}
         <Analytics />
+        <Footer dict={dict.footer} />
       </body>
     </html>
   );

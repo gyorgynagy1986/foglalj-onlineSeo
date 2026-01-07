@@ -13,8 +13,8 @@
       "description": "The online booking system for restaurants. Automate your business and increase your revenue."
     },
     "sections": {
-      "product": {
-        "title": "Product",
+      "features": {
+        "title": "Features",
         "links": [
           {
             "text": "All Features",
@@ -30,6 +30,23 @@
           }
         ]
       },
+      "resources": {
+        "title": "Resources",
+        "links": [
+          {
+            "text": "Blog",
+            "href": "/blog"
+          },
+          {
+            "text": "Restaurant Guides",
+            "href": "/guides"
+          },
+          {
+            "text": "Success Stories",
+            "href": "/stories"
+          }
+        ]
+      },
       "support": {
         "title": "Support",
         "links": [
@@ -42,8 +59,8 @@
             "href": "#faq"
           },
           {
-            "text": "hello@bookonline.com",
-            "href": "mailto:hello@bookonline.com"
+            "text": "hello@foglaljonline.hu",
+            "href": "mailto:hello@foglaljonline.hu"
           }
         ]
       },
@@ -154,7 +171,7 @@
       },
       {
         "question": "What support do I get?",
-        "answer": "English email and phone support is available. We also provide detailed documentation and video tutorials. Premium customers get a dedicated account manager."
+        "answer": "English and Hungarian email and phone support is available. We also provide detailed documentation and video tutorials. Premium customers get a dedicated account manager."
       },
       {
         "question": "Can I import existing data?",
@@ -344,6 +361,28 @@
     }
   },
 
+  "support": {
+    "badge": "Premium Support",
+    "title": "We've got your back:",
+    "titleHighlight": "continuous support",
+    "description": "We know that hospitality never sleeps. Our system is designed to provide a rock-solid foundation, but if you ever have a question, our team is ready to help.",
+    "features": {
+      "support": {
+        "title": "Available 7 days a week",
+        "description": "Whether it's a technical inquiry or help with configuration, our support team is available every day of the week to resolve any issues."
+      },
+      "monitoring": {
+        "title": "Proactive system monitoring",
+        "description": "We don't wait for you to report issues. Our automated systems monitor service health 24/7 and intervene immediately if any anomaly is detected."
+      },
+      "security": {
+        "title": "Data security & backups",
+        "description": "Your reservation data is secure. We perform regular automated backups and ensure all communication happens over encrypted channels."
+      }
+    },
+    "cta": "Get in touch with us"
+  },
+
   "features": {
     "badge": "Features",
     "title": "Everything a modern",
@@ -352,40 +391,49 @@
     "learnMore": "Learn more",
     "features": [
       {
-        "title": "Smart Booking System",
-        "description": "Automated table management, area handling, and real-time capacity optimization."
+        "title": "Table Map",
+        "description": "Clear table and guest management, real-time data, and one-click export of daily reservations to PDF.",
+        "link": "/en/funkciok/asztalterkep"
       },
       {
         "title": "Professional Guest Management",
-        "description": "Detailed guest profiles, booking history, and personalized services."
+        "description": "Detailed guest profiles, booking history, and personalized services.",
+        "link": "/funkciok/vendegkezeles"
       },
       {
         "title": "Business Analytics",
-        "description": "Detailed reports, revenue analysis, and real-time performance metrics."
+        "description": "Detailed reports, revenue analysis, and real-time performance metrics.",
+        "link": "/funkciok/uzleti-jelentesek"
       },
       {
         "title": "Email Automation",
-        "description": "Automatic reminders, confirmations, and feedback requests."
+        "description": "Automatic reminders, confirmations, and feedback requests.",
+        "link": "/funkciok/automatikus-emlekeztetok"
       },
       {
         "title": "Browser Notifications",
-        "description": "Push notifications for new bookings, modifications, and cancellations in real-time."
+        "description": "Push notifications for new bookings, modifications, and cancellations in real-time.",
+        "link": "/funkciok/bongeszo-ertesitesek"
       },
       {
         "title": "QR Code Check-in",
-        "description": "Guests receive a unique QR code – verify with a single scan upon arrival."
+        "description": "Guests receive a unique QR code – verify with a single scan upon arrival.",
+        "link": "/funkciok/qr-kod-bejelentkezes"
       },
       {
         "title": "Dynamic Time Rules",
-        "description": "Automatically adjust booking duration based on party size."
+        "description": "Automatically adjust booking duration based on party size.",
+        "link": "/funkciok/dinamikus-idoszabalyok"
       },
       {
         "title": "Customizable Rules",
-        "description": "Flexible opening hours, special days, and custom booking conditions."
+        "description": "Flexible opening hours, special days, and custom booking conditions.",
+        "link": "/funkciok/testreszabhato-szabalyok"
       },
       {
         "title": "Mobile-Friendly Interface",
-        "description": "Responsive design on all devices – guests can book from anywhere."
+        "description": "Responsive design on all devices – guests can book from anywhere.",
+        "link": "/funkciok/mobilbarat-felulet"
       }
     ],
     "bottomCta": {
