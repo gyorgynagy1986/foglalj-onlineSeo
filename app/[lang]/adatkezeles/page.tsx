@@ -48,7 +48,7 @@ const PROCESSORS = {
       "A szolgáltató a szolgáltatás nyújtásához alvállalkozókat (sub-processors) vehet igénybe. Egyes esetekben EGT-n kívüli hozzáférés/adattovábbítás is előfordulhat (pl. üzemeltetés, támogatás). Ilyenkor megfelelő garanciákat alkalmazunk (pl. EU Bizottság által elfogadott általános szerződési feltételek – SCC, illetve ahol alkalmazható, megfelelőségi mechanizmusok).",
     links: {
       dpa: "https://resend.com/legal/dpa",
-      privacy: "https://resend.com/legal/privacy-policy",
+      privacy: "https://resend.com/legal/adatkezeles-policy",
     },
   },
 
