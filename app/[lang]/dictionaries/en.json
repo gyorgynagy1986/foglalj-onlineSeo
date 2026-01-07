@@ -398,42 +398,42 @@
       {
         "title": "Professional Guest Management",
         "description": "Detailed guest profiles, booking history, and personalized services.",
-        "link": "/funkciok/vendegkezeles"
+        "link": "/en/funkciok/vendegkezeles"
       },
       {
         "title": "Business Analytics",
         "description": "Detailed reports, revenue analysis, and real-time performance metrics.",
-        "link": "/funkciok/uzleti-jelentesek"
+        "link": "/en/funkciok/uzleti-jelentesek"
       },
       {
         "title": "Email Automation",
         "description": "Automatic reminders, confirmations, and feedback requests.",
-        "link": "/funkciok/automatikus-emlekeztetok"
+        "link": "/en/funkciok/automatikus-emlekeztetok"
       },
       {
         "title": "Browser Notifications",
         "description": "Push notifications for new bookings, modifications, and cancellations in real-time.",
-        "link": "/funkciok/bongeszo-ertesitesek"
+        "link": "/en/funkciok/bongeszo-ertesitesek"
       },
       {
         "title": "QR Code Check-in",
         "description": "Guests receive a unique QR code – verify with a single scan upon arrival.",
-        "link": "/funkciok/qr-kod-bejelentkezes"
+        "link": "/en/funkciok/qr-kod-bejelentkezes"
       },
       {
         "title": "Dynamic Time Rules",
         "description": "Automatically adjust booking duration based on party size.",
-        "link": "/funkciok/dinamikus-idoszabalyok"
+        "link": "/en/funkciok/dinamikus-idoszabalyok"
       },
       {
         "title": "Customizable Rules",
         "description": "Flexible opening hours, special days, and custom booking conditions.",
-        "link": "/funkciok/testreszabhato-szabalyok"
+        "link": "/en/funkciok/testreszabhato-szabalyok"
       },
       {
         "title": "Mobile-Friendly Interface",
         "description": "Responsive design on all devices – guests can book from anywhere.",
-        "link": "/funkciok/mobilbarat-felulet"
+        "link": "/en/funkciok/mobilbarat-felulet"
       }
     ],
     "bottomCta": {

@@ -1,4 +1,3 @@
-
 {
   "common": {
     "skipToContent": "Saltar al contenido principal",
@@ -404,47 +403,47 @@
       {
         "title": "Mapa de mesas",
         "description": "Gestión transparente de mesas y huéspedes, datos en tiempo real y exportación de reservas diarias en PDF con un clic.",
-        "link": "/funkciok/asztalterkep"
+        "link": "/es/funkciok/asztalterkep"
       },
       {
         "title": "Gestión profesional de huéspedes",
         "description": "Perfiles detallados de huéspedes, historial de reservas y servicios personalizados.",
-        "link": "/funkciok/vendegkezeles"
+        "link": "/es/funkciok/vendegkezeles"
       },
       {
         "title": "Análisis empresarial",
         "description": "Informes detallados, análisis de ingresos e indicadores de rendimiento en tiempo real.",
-        "link": "/funkciok/uzleti-jelentesek"
+        "link": "/es/funkciok/uzleti-jelentesek"
       },
       {
         "title": "Automatización de emails",
         "description": "Recordatorios automáticos, confirmaciones y solicitudes de opinión.",
-        "link": "/funkciok/automatikus-emlekeztetok"
+        "link": "/es/funkciok/automatikus-emlekeztetok"
       },
       {
         "title": "Notificaciones del navegador",
         "description": "Notificaciones push sobre nuevas reservas, modificaciones y cancelaciones en tiempo real.",
-        "link": "/funkciok/bongeszo-ertesitesek"
+        "link": "/es/funkciok/bongeszo-ertesitesek"
       },
       {
         "title": "Check-in con código QR",
         "description": "Sus huéspedes reciben un código QR único: verificable con un solo escaneo al llegar.",
-        "link": "/funkciok/qr-kod-bejelentkezes"
+        "link": "/es/funkciok/qr-kod-bejelentkezes"
       },
       {
         "title": "Reglas de tiempo dinámicas",
         "description": "Configure automáticamente la duración de la reserva según el número de comensales.",
-        "link": "/funkciok/dinamikus-idoszabalyok"
+        "link": "/es/funkciok/dinamikus-idoszabalyok"
       },
       {
         "title": "Reglas personalizables",
         "description": "Horarios flexibles, días especiales y condiciones de reserva personalizadas.",
-        "link": "/funkciok/testreszabhato-szabalyok"
+        "link": "/es/funkciok/testreszabhato-szabalyok"
       },
       {
         "title": "Interfaz amigable para móviles",
         "description": "Diseño responsive en todos los dispositivos: sus huéspedes pueden reservar desde cualquier lugar.",
-        "link": "/funkciok/mobilbarat-felulet"
+        "link": "/es/funkciok/mobilbarat-felulet"
       }
     ],
     "bottomCta": {
