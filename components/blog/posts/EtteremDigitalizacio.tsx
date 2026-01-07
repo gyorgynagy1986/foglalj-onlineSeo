@@ -567,10 +567,10 @@ export default function EtteremDigitalizacioPost() {
       <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm my-10 not-prose">
         <div className="space-y-0 relative before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-200 before:to-transparent">
           {[
-            { week: "1. hét", task: "Online foglalás aktiválása" },
-            { week: "2. hét", task: "Automatikus visszaigazolások beállítása" },
-            { week: "3. hét", task: "QR-kódos check-in bevezetése" },
-            { week: "4. hét", task: "Teljes kapacitásoptimalizálás" },
+            { week: "1", task: "Online foglalás aktiválása" },
+            { week: "2", task: "Automatikus visszaigazolások beállítása" },
+            { week: "3", task: "QR-kódos check-in bevezetése" },
+            { week: "4", task: "Teljes kapacitásoptimalizálás" },
           ].map((step, index) => (
             <div
               key={index}
