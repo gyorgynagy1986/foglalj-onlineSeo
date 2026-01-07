@@ -157,9 +157,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {post.content}
           </div>
 
-          {/* CTA */}
-          <BlogCTA category={post.category} />
-
           {/* Related Posts */}
           {relatedPosts.length > 0 && <RelatedPosts posts={relatedPosts} />}
         </div>
