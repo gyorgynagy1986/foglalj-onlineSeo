@@ -93,14 +93,12 @@ export default function Features({ dict }: FeaturesProps) {
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {dict.features.map((feature, index) => {
-          
-          console.log(feature.link)
-          
-          const Icon = featureIcons[index];
+            const Icon = featureIcons[index];
             return (
-              <article
+              <Link
                 key={index}
-                className="group fade-in opacity-0 translate-y-6 transition-all duration-600 bg-white p-7 rounded-2xl border border-gray-100 hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(13,94,75,0.15)] hover:border-[#0d5e4b]/20"
+                href={feature?.link || "#"}
+                className="group fade-in opacity-0 translate-y-6 transition-all duration-600 bg-white p-7 rounded-2xl border border-gray-100 hover:-translate-y-1 hover:shadow-[0_20px_40px_-12px_rgba(13,94,75,0.15)] hover:border-[#0d5e4b]/20 block cursor-pointer"
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
                 {/* Icon */}
@@ -118,7 +116,7 @@ export default function Features({ dict }: FeaturesProps) {
 
                 {/* Subtle arrow on hover */}
                 <div className="mt-4 flex items-center gap-2 text-[#0d5e4b] text-sm font-medium opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
-                  <Link href={`${feature?.link}`}>{dict.learnMore}</Link> 
+                  <span>{dict.learnMore}</span>
                   <svg
                     className="w-4 h-4"
                     fill="none"
@@ -133,7 +131,7 @@ export default function Features({ dict }: FeaturesProps) {
                     />
                   </svg>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>
@@ -145,14 +143,10 @@ export default function Features({ dict }: FeaturesProps) {
               <p className="text-gray-900 font-semibold">
                 {dict.bottomCta.question}
               </p>
-              <p className="text-gray-500 text-sm">
-                {dict.bottomCta.subtitle}
-              </p>
+              <p className="text-gray-500 text-sm">{dict.bottomCta.subtitle}</p>
             </div>
-            
-            <a
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-[#0d5e4b] text-white hover:bg-[#0a4a3a] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap"
-            >
+
+            <a className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-[#0d5e4b] text-white hover:bg-[#0a4a3a] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap">
               {dict.bottomCta.button}
               <svg
                 className="w-4 h-4"

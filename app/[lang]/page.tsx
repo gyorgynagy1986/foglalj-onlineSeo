@@ -28,12 +28,10 @@ export default async function Home({ params }: HomeProps) {
         <Features dict={dict.features} />
 
         {/* 3. TERMÉK BEMUTATÁSA (A "wow" faktor) */}
-        {/* Érdemesebb előbb megmutatni a szoftvert, mielőtt a supportról beszélsz */}
         <BookingManagement dict={dict.bookingManagement} />
         <BookingForms dict={dict.bookingForms} />
 
         {/* 4. BIZALOMÉPÍTÉS (Trust) */}
-        {/* Itt a legjobb helye a Supportnak: "Látom, hogy jó a szoftver, de mi van ha elakadok?" */}
         <Support dict={dict.support} />
         <Testimonials dict={dict.testimonials} />
 
