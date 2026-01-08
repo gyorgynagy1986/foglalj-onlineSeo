@@ -7,6 +7,10 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+import ConsentInitializer from "@/components/banner/ConsentInitializer";
+import CookieBanner from "@/components/banner/CookieBanner";
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -176,7 +180,10 @@ export default async function RootLayout(props: RootLayoutProps) {
         />
       </head>
       <body className={`font-sans antialiased`}>
+        <ConsentInitializer />
         <Navbar dict={dict.navbar} lang={lang} />
+        <GoogleAnalytics gaId="G-4PGRRY8H9Y" />
+        <CookieBanner />
 
         {children}
         <Analytics />
