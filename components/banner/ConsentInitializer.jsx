@@ -1,7 +1,7 @@
 // app/components/ConsentInitializer.js
 "use client";
 
-import Script from 'next/script';
+import Script from "next/script";
 
 export default function ConsentInitializer() {
   return (
@@ -32,15 +32,19 @@ export default function ConsentInitializer() {
             }
             window.gtag = gtag;
 
+            // -----------------------------------------------------------
+            // 1. LÉPÉS: ELŐSZÖR MINDIG A TILTÁS (Consent Default)
+            // -----------------------------------------------------------
+            
             // ✅ MINDIG denied alapértelmezéssel indulunk!
             gtag("consent", "default", {
               ad_storage: "denied",
               ad_user_data: "denied", 
               ad_personalization: "denied",
               analytics_storage: "denied",
-              functionality_storage: "granted", // Ez maradhat granted
+              functionality_storage: "granted",
               personalization_storage: "denied",
-              security_storage: "granted", // Ez is maradhat granted
+              security_storage: "granted",
               wait_for_update: 2000,
               url_passthrough: true,
               ads_data_redaction: true
@@ -53,6 +57,19 @@ export default function ConsentInitializer() {
               region: ['HU', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB', 'IS', 'LI', 'NO'],
               wait_for_update: 2000
             });
+
+            // -----------------------------------------------------------
+            // 2. LÉPÉS: A KONFIGURÁCIÓ (Csak a tiltás után jöhet!)
+            // -----------------------------------------------------------
+            
+            // Ez kapcsolja össze az Ads fiókot. Mivel a default fentebb már "denied",
+            // ez a sor biztonságos, nem sért GDPR-t, mert tudja a rendszer, hogy 
+            // "figyelj, de ne tárolj semmit, amíg nincs update".
+            gtag("config", "AW-824358872");
+
+            // -----------------------------------------------------------
+            // 3. LÉPÉS: MENTETT HOZZÁJÁRULÁS ELLENŐRZÉSE (Update)
+            // -----------------------------------------------------------
 
             // ✅ MAJD ellenőrizzük a mentett hozzájárulást
             const savedConsent = getCookie('cookie_consent');
