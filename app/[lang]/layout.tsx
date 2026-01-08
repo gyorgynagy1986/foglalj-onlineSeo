@@ -182,7 +182,7 @@ export default async function RootLayout(props: RootLayoutProps) {
       <body className={`font-sans antialiased`}>
         <ConsentInitializer />
         <Navbar dict={dict.navbar} lang={lang} />
-        <GoogleAnalytics gaId="GT-WBK5K5VS" />
+        <GoogleAnalytics gaId="G-4PGRRY8H9Y" />
         <CookieBanner />
 
         {children}
