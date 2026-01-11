@@ -1,5 +1,12 @@
 "use client";
 
+// TypeScript típus a gtag-hez
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 import type React from "react";
 import { useState, useEffect, useRef, useTransition } from "react";
 import {
@@ -126,6 +133,13 @@ export default function Contact({ dict }: ContactProps) {
       });
 
       if (result.success) {
+        // Google Ads konverzió követés
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag("event", "conversion", {
+            send_to: "AW-824358872/YTHLCLi51d8bENjviokD",
+          });
+        }
+
         setFeedback({
           type: "success",
           message: dict.feedback.success,
@@ -172,6 +186,7 @@ export default function Contact({ dict }: ContactProps) {
 
             <div className="flex flex-col gap-4">
               {/* Phone */}
+
               <a
                 href={`tel:${dict.contactInfo.phoneNumber.replace(/\s/g, "")}`}
                 className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-100 transition-all duration-300 hover:border-[#0d5e4b]/20 hover:shadow-[0_10px_30px_-10px_rgba(13,94,75,0.15)]"
@@ -190,6 +205,7 @@ export default function Contact({ dict }: ContactProps) {
               </a>
 
               {/* Email */}
+
               <a
                 href={`mailto:${dict.contactInfo.emailAddress}`}
                 className="group flex items-center gap-4 p-5 bg-white rounded-xl border border-gray-100 transition-all duration-300 hover:border-[#0d5e4b]/20 hover:shadow-[0_10px_30px_-10px_rgba(13,94,75,0.15)]"
