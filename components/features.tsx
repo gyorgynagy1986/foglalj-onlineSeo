@@ -15,6 +15,13 @@ import {
 
 import Link from "next/link";
 
+// TypeScript típus a gtag-hez
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 interface FeaturesProps {
   dict: {
     badge: string;
@@ -67,6 +74,15 @@ export default function Features({ dict }: FeaturesProps) {
 
     return () => observer.disconnect();
   }, []);
+
+  // Google Ads konverzió követés
+  const handleRegisterClick = () => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-824358872/C_cTCOjj6OAbENjviokD",
+      });
+    }
+  };
 
   return (
     <section
@@ -146,7 +162,13 @@ export default function Features({ dict }: FeaturesProps) {
               <p className="text-gray-500 text-sm">{dict.bottomCta.subtitle}</p>
             </div>
 
-            <a className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-[#0d5e4b] text-white hover:bg-[#0a4a3a] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap">
+            <Link
+              href="https://www.bukio.hu/auth/register"
+              target="_blank"
+              rel="noopener nofollow"
+              onClick={handleRegisterClick}
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl bg-[#0d5e4b] text-white hover:bg-[#0a4a3a] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg whitespace-nowrap"
+            >
               {dict.bottomCta.button}
               <svg
                 className="w-4 h-4"
@@ -161,7 +183,7 @@ export default function Features({ dict }: FeaturesProps) {
                   d="M9 5l7 7-7 7"
                 />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

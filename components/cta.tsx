@@ -4,6 +4,13 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
 
+// TypeScript típus a gtag-hez
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 interface CTAProps {
   dict: {
     badge: string;
@@ -37,6 +44,15 @@ export default function CTA({ dict }: CTAProps) {
 
     return () => observer.disconnect();
   }, []);
+
+  // Google Ads konverzió követés
+  const handleRegisterClick = () => {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", "conversion", {
+        send_to: "AW-824358872/C_cTCOjj6OAbENjviokD",
+      });
+    }
+  };
 
   return (
     <section
@@ -80,6 +96,7 @@ export default function CTA({ dict }: CTAProps) {
             href="https://www.bukio.hu/auth/register"
             target="_blank"
             rel="noopener nofollow"
+            onClick={handleRegisterClick}
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold no-underline rounded-xl cursor-pointer transition-all duration-300 bg-white text-[#0d5e4b] hover:bg-emerald-50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)]"
           >
             {dict.buttons.primary}
