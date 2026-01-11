@@ -1,35 +1,57 @@
 import { NextResponse } from "next/server";
 
 const locales = ["en", "hu", "es"];
-
 const defaultLocale = "hu";
+const LOCALE_COOKIE = "NEXT_LOCALE";
+
+function getPreferredLocale(request) {
+  // 1) Cookie-ból először (user választás)
+  const cookieLocale = request.cookies.get(LOCALE_COOKIE)?.value;
+  if (cookieLocale && locales.includes(cookieLocale)) {
+    return cookieLocale;
+  }
+
+  // 2) Böngésző nyelvéből
+  const acceptLanguage = request.headers.get("accept-language");
+  if (!acceptLanguage) return defaultLocale;
+
+  const preferred = acceptLanguage
+    .split(",")
+    .map((lang) => lang.split(";")[0].trim().substring(0, 2).toLowerCase())
+    .find((lang) => locales.includes(lang));
+
+  return preferred || "en";
+}
 
 export function proxy(request) {
-  
   const url = new URL(request.url);
-  
   const { pathname } = url;
 
-  // 1) Fájlok/assetek átengedése (gyors kilépés)
   if (pathname.includes(".")) return NextResponse.next();
 
-  // 2) Már lokalizált útvonal? engedjük tovább
   const first = pathname.split("/")[1];
-  if (locales.includes(first)) return NextResponse.next();
+  
+  // Ha már lokalizált útvonal → cookie frissítése
+  if (locales.includes(first)) {
+    const response = NextResponse.next();
+    response.cookies.set(LOCALE_COOKIE, first, { 
+      maxAge: 60 * 60 * 24 * 365, // 1 év
+      path: "/" 
+    });
+    return response;
+  }
 
-  // 3) Root: egyszeri redirect a legjobb nyelvre
+  const locale = getPreferredLocale(request);
+
   if (pathname === "/") {
-    url.pathname = `/${defaultLocale}`; // mindig hu
+    url.pathname = `/${locale}`;
     return NextResponse.redirect(url);
   }
 
-  // 4) Egyéb nem lokalizált útvonalak: rewrite a default alá (nincs extra kör)
-  url.pathname = `/${defaultLocale}${pathname}`;
+  url.pathname = `/${locale}${pathname}`;
   return NextResponse.rewrite(url);
 }
+
 export const config = {
-  matcher: [
-    // fussunk mindenre az _next és api kivételével
-    "/((?!api|_next).*)",
-  ],
+  matcher: ["/((?!api|_next).*)"],
 };
