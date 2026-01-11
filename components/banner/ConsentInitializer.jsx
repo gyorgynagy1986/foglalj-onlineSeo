@@ -5,11 +5,18 @@ import Script from "next/script";
 
 export default function ConsentInitializer() {
   return (
-    <Script
-      id="consent-initializer"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
+    <>
+      <Script
+        id="gtag-ads"
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-824358872"
+      />
+
+      <Script
+        id="consent-initializer"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
           (function() {
             // Helper function to get cookie value
             function getCookie(name) {
@@ -95,7 +102,8 @@ export default function ConsentInitializer() {
             gtag("set", "url_passthrough", true);
           })();
         `,
-      }}
-    />
+        }}
+      />
+    </>
   );
 }

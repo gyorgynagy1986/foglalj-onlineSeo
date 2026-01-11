@@ -1,11 +1,13 @@
 import { NextResponse } from "next/server";
 
 const locales = ["en", "hu", "es"];
+
 const defaultLocale = "hu";
 
-
 export function proxy(request) {
+  
   const url = new URL(request.url);
+  
   const { pathname } = url;
 
   // 1) Fájlok/assetek átengedése (gyors kilépés)
