@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://foglaljonline.hu";
-  const locales = ["hu", "en", "es"];
+  const locales = ["hu", "en", "es", "de"];
 
   const staticPages = [
     "",

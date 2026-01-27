@@ -39,6 +39,7 @@ const languages = [
   { code: "hu", name: "Magyar", flag: "🇭🇺" },
   { code: "en", name: "English", flag: "🇬🇧" },
   { code: "es", name: "Español", flag: "🇪🇸" },
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },
 ];
 
 export default function Navbar({ dict, lang }: NavbarProps) {
