@@ -9,7 +9,7 @@
   },
   "footer": {
     "brand": {
-      "name": "BookOnline",
+      "name": "FoglaljOnline",
       "description": "Das Online-Reservierungssystem für Restaurants. Automatisieren Sie Ihr Geschäft und steigern Sie Ihren Umsatz."
     },
     "sections": {
@@ -81,7 +81,7 @@
       "phoneLabel": "Telefon",
       "phoneNumber": "+36 30 656 4162",
       "emailLabel": "E-Mail",
-      "emailAddress": "hello@bookonline.com"
+      "emailAddress": "hello@foglaljonline.com"
     },
     "responseTime": {
       "label": "Schnelle Reaktionszeit:",

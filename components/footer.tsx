@@ -177,14 +177,14 @@ export default function Footer({ dict }: FooterProps) {
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-white/50">
           <p>
-            © {currentYear} {dict.brand.name} by{" "}
+            © {currentYear} {dict.brand.name}, {" "}
             <Link
-              href="https://www.foglaljonline.hu"
+              href="https://www.bukio.hu"
               target="_blank"
               rel="noopener"
               className="text-white/70 no-underline hover:text-emerald-300 transition-colors"
             >
-              FoglaljOnline
+              Bukio partner
             </Link>
             . {dict.bottom.copyright}
           </p>
