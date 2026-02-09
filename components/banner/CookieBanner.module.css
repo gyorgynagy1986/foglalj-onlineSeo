@@ -1,614 +1,398 @@
-/* CookieBanner.module.css - Optimalizált verzió */
-
-.cookieBanner {
+/* ===== COMPACT BANNER ===== */
+.cookieBannerCompact {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.98) 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 
-    0 -10px 25px -5px rgba(0, 0, 0, 0.08),
-    0 -8px 10px -6px rgba(0, 0, 0, 0.03);
-  z-index: 1050;
-  animation: slideUpFadeIn 0.4s ease-out;
-  max-width: 100vw;
+  background: linear-gradient(135deg, #1a1a2e 0%, #020a1c 100%);
+  box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  animation: slideUp 0.4s ease-out;
+  border-top: 2px solid #0f3460;
 }
 
-.container {
-  max-width: 1200px;
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.compactContent {
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 1.25rem;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-/* KOMPAKTABB FEJLÉC */
-.header {
-  position: relative;
-  padding-right: 40px;
-  margin-bottom: 1rem; /* Csökkentve 1.25rem-ről */
+.compactLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
 }
 
-.title {
-  font-size: 1.1rem; /* Kicsit kisebb */
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 0.5rem; /* Csökkentve 0.75rem-ről */
-  letter-spacing: -0.025em;
+.cookieIcon {
+  font-size: 24px;
+  flex-shrink: 0;
 }
 
-.description {
-  font-size: 0.9rem; /* Kicsit kisebb */
-  color: #64748b;
-  line-height: 1.5; /* Kompaktabb */
-  margin-bottom: 0;
+.compactText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #ffffff;
+  font-size: 14px;
+  min-width: 0;
 }
 
-.privacyLink {
-  color: #0b5e00;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-  border-bottom: 1px solid transparent;
+.compactText strong {
+  font-weight: 600;
+  font-size: 15px;
 }
 
-.privacyLink:hover {
-  color: #1d4ed8;
-  border-bottom-color: #3b82f6;
-}
-
-/* ÖSSZECSUKHATÓ TARTALOM ANIMÁCIÓVAL */
-.consentGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Kicsit kisebb min-width */
-  gap: 0.75rem; /* Csökkentve */
-  margin-bottom: 1.25rem;
-  animation: expandIn 0.3s ease-out;
+.compactDescription {
+  font-size: 13px;
+  color: #b8c1ec;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@keyframes expandIn {
+.inlineLink {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.inlineLink:hover {
+  color: white;
+}
+
+.compactButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btnSettings {
+  background: transparent;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.btnNecessary {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btnNecessary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btnAcceptAll {
+  background: linear-gradient(135deg, #4fc3f7 0%, #2196f3 100%);
+  border: none;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 195, 247, 0.3);
+  white-space: nowrap;
+}
+
+.btnAcceptAll:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 195, 247, 0.4);
+}
+
+/* ===== DROPDOWN SETTINGS ===== */
+.compactDropdown {
+  border-top: 1px solid #0f3460;
+  background: #16213e;
+  padding: 16px 20px;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
   from {
     opacity: 0;
     max-height: 0;
-    transform: translateY(-10px);
   }
   to {
     opacity: 1;
     max-height: 500px;
-    transform: translateY(0);
   }
 }
 
-.consentCard {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(226, 232, 240, 0.6);
-  border-radius: 10px; /* Kicsit kisebb border-radius */
-  padding: 0.875rem; /* Kompaktabb padding */
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  height: 100%;
+.dropdownGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.consentCard:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(148, 163, 184, 0.4);
-  transform: translateY(-1px); /* Kisebb mozgás */
-  box-shadow: 
-    0 6px 20px -5px rgba(0, 0, 0, 0.08),
-    0 6px 8px -6px rgba(0, 0, 0, 0.03);
-}
-
-.cardContent {
+.dropdownItem {
   display: flex;
   align-items: flex-start;
-  gap: 0.875rem; /* Kisebb gap */
-}
-
-.switchContainer {
-  flex-shrink: 0;
-  margin-top: 0.125rem;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px; /* Kicsit kisebb */
-  height: 22px;
-}
-
-.switchInput {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switchSlider {
-  position: absolute;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(15, 52, 96, 0.3);
+  border-radius: 6px;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #cbd5e1;
-  transition: all 0.3s ease;
-  border-radius: 22px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s;
+  border: 1px solid transparent;
 }
 
-.switchSlider:before {
-  position: absolute;
-  content: "";
-  height: 18px;
-  width: 18px;
-  left: 2px;
-  bottom: 2px;
-  background: white;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+.dropdownItem:hover {
+  background: rgba(15, 52, 96, 0.5);
+  border-color: #0f3460;
 }
 
-.switchInput:checked + .switchSlider {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  box-shadow: inset 0 2px 4px rgba(59, 130, 246, 0.3);
-}
-
-.switchInput:checked + .switchSlider:before {
-  transform: translateX(18px); /* Igazítva a kisebb switch-hez */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.switchInput:disabled + .switchSlider {
-  background: #e2e8f0;
+.dropdownItem.required {
   cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.switchInput:disabled + .switchSlider:before {
-  background: #f1f5f9;
-}
-
-.cardText {
-  flex: 1;
-}
-
-.cardTitle {
-  font-size: 0.9rem; /* Kicsit kisebb */
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 0.375rem; /* Csökkentve */
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.requiredBadge {
-  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
-  color: white;
-  font-size: 0.7rem; /* Kisebb */
-  font-weight: 500;
-  padding: 0.2rem 0.4rem; /* Kompaktabb */
-  border-radius: 5px;
-  letter-spacing: 0.025em;
-}
-
-.cardDescription {
-  font-size: 0.825rem; /* Kisebb */
-  color: #64748b;
-  line-height: 1.4; /* Kompaktabb */
-  margin: 0;
-}
-
-/* JAVÍTOTT GOMB ELRENDEZÉS */
-.buttonContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.625rem 1.125rem; /* Kicsit kisebb padding */
-  font-size: 0.85rem; /* Kisebb betűméret */
-  font-weight: 600;
-  border-radius: 8px; /* Kisebb border-radius */
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  min-width: 110px; /* Kisebb min-width */
-  position: relative;
-  overflow: hidden;
-}
-
-.button:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
-}
-
-.button:hover:before {
-  left: 100%;
-}
-
-/* SECONDARY - Csak szükséges */
-.buttonSecondary {
-  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
-  color: white;
-  box-shadow: 0 3px 10px rgba(100, 116, 139, 0.3);
-}
-
-.buttonSecondary:hover {
-  background: linear-gradient(135deg, #475569 0%, #334155 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.4);
-}
-
-/* PRIMARY - Testreszabás (outline style) */
-.buttonPrimary {
-  background: transparent;
-  color: #3b82f6;
-  border: 2px solid #3b82f6;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.15);
-}
-
-.buttonPrimary:hover {
-  background: #3b82f6;
-  color: white;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
-}
-
-/* Amikor a "Kiválasztottak elfogadása" állapotban van */
-.buttonPrimary.solid {
-  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-  color: white;
-  border: 2px solid transparent;
-  box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
-}
-
-.buttonPrimary.solid:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
-}
-
-/* SUCCESS - Összes elfogadása */
-.buttonSuccess {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  color: white;
-  box-shadow: 0 3px 10px rgba(16, 185, 129, 0.3);
-}
-
-.buttonSuccess:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
-}
-
-/* EGYSZERŰBB FOOTER */
-.footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 0.75rem; /* Csökkentve */
-  border-top: 1px solid rgba(226, 232, 240, 0.4);
-  margin-top: 0.5rem; /* Csökkentve */
-}
-
-.footerInfo {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-}
-
-.poweredBy {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: #94a3b8; /* Halványabb szín */
-}
-
-.poweredByText {
-  font-weight: 400;
-}
-
-.studioLink {
-  color: #64748b;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  font-weight: 500;
-}
-
-.studioLink:hover {
-  color: #3b82f6;
-}
-
-.compliance {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #94a3b8;
-}
-
-.complianceText {
-  color: #22c55e;
-  font-weight: 500;
-  font-size: 10px;
-}
-
-.versionBadge {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  color: white;
-  padding: 2px 6px;
-  border-radius: 8px;
-  font-size: 9px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
   opacity: 0.8;
 }
 
-/* CLOSE BUTTON */
-.closeButton {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 28px;
-  height: 28px;
-  background: rgba(0, 0, 0, 0.05);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dropdownItem input[type="checkbox"] {
+  margin-top: 2px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  color: #64748b;
-  z-index: 10;
-}
-
-.closeButton:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: #374151;
-  transform: scale(1.05);
-}
-
-.closeButton svg {
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
 }
 
-/* FLOATING BUTTON */
-.floatingButton {
+.dropdownItem.required input[type="checkbox"] {
+  cursor: not-allowed;
+}
+
+.dropdownLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #ffffff;
+  font-size: 13px;
+  flex: 1;
+}
+
+.dropdownLabel strong {
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdownLabel small {
+  color: #b8c1ec;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.badge {
+  background: #4fc3f7;
+  color: #1a1a2e;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.dropdownActions {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btnSaveSelected {
+  background: linear-gradient(135deg, #4fc3f7 0%, #2196f3 100%);
+  border: none;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 195, 247, 0.3);
+}
+
+.btnSaveSelected:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 195, 247, 0.4);
+}
+
+/* ===== FLOATING BUTTON ===== */
+.floatingCookieButton {
   position: fixed;
   bottom: 20px;
-  left: 20px;
-  width: 52px;
-  height: 52px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #006e2a 0%, #bbe584 100%);
-  color: white;
-  border: none;
-  box-shadow: 
-    0 6px 20px rgba(59, 130, 246, 0.3),
-    0 4px 12px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid #0f3460;
+  color: #ffffff;
+  font-size: 24px;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  z-index: 1049;
-  animation: bounceIn 0.5s ease-out;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-.floatingButton:hover {
-  background: linear-gradient(135deg, #16c95b 0%, #bbe584 100%);
-  transform: scale(1.08);
-  box-shadow: 
-    0 8px 25px rgba(59, 130, 246, 0.4),
-    0 6px 15px rgba(0, 0, 0, 0.15);
+.floatingCookieButton:hover {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 6px 20px rgba(79, 195, 247, 0.4);
 }
 
-.floatingButton svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* ANIMÁCIÓK */
-@keyframes slideUpFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.98);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* MOBIL RESPONSIVITÁS */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .cookieBanner {
-    max-height: 80vh;
-    overflow-y: auto;
-    border-radius: 12px 12px 0 0;
-  }
-  
-  .container {
-    padding: 1rem 0.875rem;
-  }
-  
-  .header {
-    padding-right: 32px;
-    margin-bottom: 0.875rem;
-  }
-  
-  .title {
-    font-size: 1rem;
-  }
-  
-  .description {
-    font-size: 0.85rem;
-  }
-  
-  .consentGrid {
-    grid-template-columns: 1fr;
-    gap: 0.625rem;
-    margin-bottom: 1rem;
-  }
-  
-  .consentCard {
-    padding: 0.75rem;
-  }
-  
-  .buttonContainer {
+  .compactContent {
     flex-direction: column;
-    gap: 0.625rem;
-    margin-bottom: 0.75rem;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 16px;
   }
-  
-  .button {
+
+  .compactLeft {
+    gap: 10px;
+  }
+
+  .compactDescription {
+    white-space: normal;
+  }
+
+  .compactButtons {
+    justify-content: space-between;
     width: 100%;
-    min-width: auto;
-    padding: 0.75rem 1rem;
-    font-size: 0.875rem;
   }
-  
-  .footerInfo {
-    flex-direction: column;
-    gap: 8px;
-    font-size: 10px;
+
+  .btnSettings {
+    order: -1;
   }
-  
-  .closeButton {
-    top: 8px;
-    right: 8px;
-    width: 24px;
-    height: 24px;
+
+  .dropdownGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
-  
-  .closeButton svg {
-    width: 14px;
-    height: 14px;
+
+  .floatingCookieButton {
+    bottom: 16px;
+    right: 16px;
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0.875rem 0.625rem;
+  .compactText strong {
+    font-size: 14px;
   }
-  
-  .floatingButton {
-    width: 38px;
-    height: 38px;
-    bottom: 16px;
-    left: 16px;
+
+  .compactDescription {
+    font-size: 12px;
   }
-  
-  .floatingButton svg {
-    width: 20px;
-    height: 20px;
+
+  .btnNecessary,
+  .btnAcceptAll {
+    font-size: 12px;
+    padding: 7px 12px;
   }
 }
 
-/* ACCESSIBILITY */
-.closeButton:focus,
-.button:focus,
-.floatingButton:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+/* ===== DROPDOWN FOOTER ===== */
+.dropdownFooter {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(15, 52, 96, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  .cookieBanner {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(30, 41, 59, 0.98) 100%);
-    border-top-color: rgba(148, 163, 184, 0.2);
-  }
-  
-  .title {
-    color: #f1f5f9;
-  }
-  
-  .description {
-    color: #94a3b8;
-  }
-  
-  .consentCard {
-    background: rgba(30, 41, 59, 0.8);
-    border-color: rgba(148, 163, 184, 0.2);
-  }
-  
-  .cardTitle {
-    color: #f1f5f9;
-  }
-  
-  .cardDescription {
-    color: #94a3b8;
-  }
-  
-  .closeButton {
-    background: rgba(255, 255, 255, 0.1);
-    color: #94a3b8;
-  }
-  
-  .closeButton:hover {
-    background: rgba(255, 255, 255, 0.15);
-    color: #f1f5f9;
-  }
+.footerBranding {
+  color: #b8c1ec;
+  font-size: 12px;
 }
 
-/* REDUCED MOTION */
-@media (prefers-reduced-motion: reduce) {
-  .cookieBanner,
-  .floatingButton,
-  .consentGrid {
-    animation: none;
+.footerBranding strong {
+  color: #4fc3f7;
+  font-weight: 600;
+}
+
+.footerCompliance {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.complianceBadge {
+  background: rgba(79, 195, 247, 0.15);
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  color: #4fc3f7;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===== RESPONSIVE FOOTER ===== */
+@media (max-width: 768px) {
+  .dropdownFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  
-  .button:before {
-    display: none;
+
+  .footerCompliance {
+    width: 100%;
+    justify-content: flex-start;
   }
-  
-  .button:hover,
-  .consentCard:hover {
-    transform: none;
+
+  .complianceBadge {
+    font-size: 10px;
+    padding: 3px 8px;
   }
 }
