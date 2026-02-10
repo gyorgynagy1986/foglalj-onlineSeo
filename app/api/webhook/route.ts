@@ -9,7 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const STREAM_API_SECRET = process.env.STREAM_API_SECRET!;
 
 // Email beállítások
-const EMAIL_FROM = process.env.EMAIL_FROM || 'gyurzi@gmail.com';
+const EMAIL_FROM = process.env.EMAIL_FROM || 'hello@studiobromo.hu';
 const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL!;
 
 // Webhook signature ellenőrzése
