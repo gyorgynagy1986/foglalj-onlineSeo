@@ -162,7 +162,7 @@ export async function POST(request: NextRequest) {
     
     console.log('GetStream webhook esemény:', event.type);
 
-    // Csak új üzenet eseményekre reagálunk
+    // Csak új üzenet eseményekre reagálunk!
     if (event.type === 'message.new') {
       // System üzenetek kiszűrése
       if (event.message?.type === 'system') {
