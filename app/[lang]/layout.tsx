@@ -11,6 +11,9 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import ConsentInitializer from "@/components/banner/ConsentInitializer";
 import CookieBanner from "@/components/banner/CookieBanner";
 
+import SupportChatWidget from "@/components/chat/SupportChatWidget";
+
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -355,6 +358,8 @@ export default async function RootLayout(props: RootLayoutProps) {
         <CookieBanner />
 
         {children}
+        <SupportChatWidget />
+
         <Analytics />
         <Footer dict={dict.footer} />
       </body>
