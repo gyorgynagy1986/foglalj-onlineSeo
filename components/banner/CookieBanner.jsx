@@ -73,7 +73,7 @@ export default function CookieBanner() {
         window.gtag("consent", "update", consentStatus);
         console.log("✅ Consent Mode v2 Updated:", consentStatus);
         window.gtag("event", "page_view", {
-          send_to: "G-DEXBXRS1V7",
+          send_to: "G-4PGRRY8H9Y",
           consent_update: true,
         });
       } catch (error) {
